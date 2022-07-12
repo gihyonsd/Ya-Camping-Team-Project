@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- 제이쿼리 불러오기 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+  <!-- Slick 불러오기 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+  <script>
+    $(function () {
+      $('.sale').slick({
+        infinite: true, //양방향 무한 모션
+        autoplay: true, //자동 스크롤 사용 여부
+        autoplaySpeed: 3000, // 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
+        slidesToShow: 4, // 한 화면에 보여질 컨텐츠 개수
+        slidesToScroll: 1, //스크롤 한번에 움직일 컨텐츠 개수
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <!--세일 목록-->
+    <div class="sale">
+      <div><a href="#"><img class="sale-img" src="https://dummyimage.com/180x180/000000/fff"></a></div>
+      <div><a href="#"><img class="sale-img" src="https://dummyimage.com/180x180/000000/fff"></a></div>
+      <div><a href="#"><img class="sale-img" src="https://dummyimage.com/180x180/000000/fff"></a></div>
+      <div><a href="#"><img class="sale-img" src="https://dummyimage.com/180x180/000000/fff"></a></div>
+      <div><a href="#"><img class="sale-img" src="https://dummyimage.com/180x180/000000/fff"></a></div>
+      <div><a href="#"><img class="sale-img" src="https://dummyimage.com/180x180/000000/fff"></a></div>
+      <div><a href="#"><img class="sale-img" src="https://dummyimage.com/180x180/000000/fff"></a></div>
+      <div><a href="#"><img class="sale-img" src="https://dummyimage.com/180x180/000000/fff"></a></div>
+      <div><a href="#"><img class="sale-img" src="https://dummyimage.com/180x180/000000/fff"></a></div>
+      <div><a href="#"><img class="sale-img" src="https://dummyimage.com/180x180/000000/fff"></a></div>
+    </div>
+    <!--위클리 top 캠핑장-->
+    <div class="weekly">
+
+      <!--위클리 top 캠핑장 태그-->
+      <p class="weekly-top">위클리 TOP 캠핑장</p>
+
+      <!--위클리 top 캠핑장 container-->
+      <div class="weekly-container">
+        <!--위클리 top 캠핑장 img-->
+        <a href="#"><img class="weekly-img" src="https://dummyimage.com/200x150/000htt/fff"></a>
+
+        <!--위클리 top 캠핑장 설명-->
+        <p class="weekly-describe">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem mollitia
+          laboriosam odio nobis omnis
+          consectetur tempore sapiente animi fugit optio? Tempora voluptates hic voluptas ducimus eaque praesentium
+          molestiae, iste asperiores.</p>
+
+        <!--위클리 top 캠핑장 가격-->
+        <p class="weekly-price">50,000원</p>
+
+      </div>
+
+      <!--위클리 top 캠핑장 container-->
+      <div class="weekly-container">
+        <!--위클리 top 캠핑장 img-->
+        <a href="#"><img class="weekly-img" src="https://dummyimage.com/200x150/000htt/fff"></a>
+
+        <!--위클리 top 캠핑장 설명-->
+        <p class="weekly-describe">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem mollitia
+          laboriosam odio nobis omnis
+          consectetur tempore sapiente animi fugit optio? Tempora voluptates hic voluptas ducimus eaque praesentium
+          molestiae, iste asperiores.</p>
+
+        <!--위클리 top 캠핑장 가격-->
+        <p class="weekly-price">70,000원</p>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>

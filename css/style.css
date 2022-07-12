@@ -1,0 +1,73 @@
+    /*초기화 css*/
+    * {
+      margin: 0 auto;
+    }
+
+    /*전체 container css*/
+    .container {
+      width: 1280px;
+    }
+
+    /*세일 캠핑장 div css*/
+    .sale {
+      width: 960px;
+      margin: 0 auto;
+      background-color: lightgray;
+    }
+
+    /*슬라이드 마진*/
+    .sale .slick-slide {
+      margin: 30px;
+    }
+
+    /*오른쪽 넘기기 버튼 마진*/
+    .slick-next.slick-arrow {
+      margin-right: 30px;
+    }
+
+    /*왼쪽 넘기기 버튼 마진*/
+    .slick-prev.slick-arrow {
+      margin-left: 30px;
+    }
+
+    /*위클리 TOP 캠핑장 css*/
+    .weekly {
+      width: 960px;
+      background-color: gray;
+      height: 220px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      scrollbar-width: none;
+    }
+
+    /*위클리 TOP 캠핑장 이름 부분 css*/
+    .weekly .weekly-top {
+      position: relative;
+      top: 20px;
+      left: 10px;
+      font-size: 20px;
+    }
+
+    /*위클리 TOP 캠핑장 이미지 css*/
+    .weekly-container .weekly-img {
+      margin-top: 30px;
+      margin-left: 20px;
+    }
+
+    /*위클리 TOP 캠핑장 캠핑장 설명 css*/
+    .weekly-container .weekly-describe {
+      width: 500px;
+      float: right;
+      margin-top: 50px;
+      margin-right: 225px;
+    }
+
+    /*위클리 TOP 캠핑장 캠핑장 가격 css*/
+    .weekly-container .weekly-price {
+      text-align: right;
+      margin-bottom: 20px;
+      position: relative;
+      bottom: 30px;
+      right: 30px;
+      font-size: 20px;
+    }
