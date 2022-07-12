@@ -1,0 +1,57 @@
+* {
+  margin: 0 auto;
+}
+
+.container {
+  width: 1280px;
+}
+
+/*헤더*/
+header{
+  position: relative;
+  width: 960px;
+}
+.zz{
+  width: 960px;
+  height: 50px;
+  position: fixed;
+  top : 0;
+  z-index : 999;
+  background-color: lightblue;
+}
+
+.logo {
+  /*로고*/
+  width: 150px;
+  height: 50px;
+  float: left;
+}
+
+.search {
+  /*검색*/
+  margin: 15px;
+  padding: 3px;
+  float: right;
+}
+
+.button {
+  /*로그인버튼*/
+  margin: 15px;
+  padding: 3px;
+  float: right;
+}
+
+
+/*이미지 슬라이드*/
+.slide {
+  /*슬라이드 전체*/
+  padding-top: 50px;
+  width: 960px;
+}
+
+.titleimage {
+  /*슬라이드 이미지 부분*/
+  width: 960px;
+  float: left;
+  overflow: hidden;
+}
