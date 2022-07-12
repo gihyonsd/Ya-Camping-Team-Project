@@ -1,0 +1,116 @@
+@font-face {
+  font-family: 'GongGothicMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: 'GongGothicMedium';
+}
+
+/*전체 컨테이너 영역*/
+.container {
+  margin: 0 auto;
+  width: 1280px;
+}
+
+/*카테고리 테두리 영역*/
+.category {
+  margin: 0 auto;
+  width: 960px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/*카테고리 메뉴 영역*/
+.category_menu {
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  padding-top: 10px;  
+}
+
+/*카테고리 메뉴별 링크*/
+.category_menu a {
+  text-decoration: none;
+  color: #656565;
+  font-size: 16px;
+}
+
+/*카테고리 메뉴 아이콘*/
+.category_menu img {
+  width: 50px;
+  height: 50px;
+}
+
+/*카테고리 이름*/
+.menu_name {
+  position: relative;
+  bottom: 10px;
+}
+
+/*검색 영역*/
+.search {
+  margin: 0 auto;
+  width: 960px;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/*검색 영역안의 박스부분*/
+.search_box {
+  background-color: #E8E0A1;
+  border-radius: 5px;
+  width: 800px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 50px;
+  margin-top: 7px;
+}
+
+/*검색영역의 체크인/체크아웃/카테고리별 영역*/
+.search_date, .search_region, .search_category {
+  width: 130px;
+  border: none;
+  background-color: #E8E0A1;
+  color: #515151;
+}
+
+/*검색-지역/카테고리 영역*/
+input::placeholder {
+  color: black;
+}
+
+/*검색-지역/카테고리 아이콘*/
+.search_box img {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: 35px;
+  top: 14px;
+}
+
+/*검색영역의 검색 버튼*/
+.search_btn {
+  border-radius: 5px;
+  margin-right: 50px;
+  border: none;
+  outline: 0;
+  color: white;
+  background-color: #FAAE58;
+  margin-top: 7px;
+  width: 50px;
+  height: 50px;
+}
+
+/*검색영역의 검색버튼 호버*/
+.search_btn:hover {
+  background-color: #E8E0A1;
+  color: #FAAE58;
+  cursor: pointer;
+}
+
+
