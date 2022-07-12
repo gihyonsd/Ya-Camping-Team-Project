@@ -1,0 +1,57 @@
+* {
+  margin:0 auto;
+}
+
+.container {
+  width: 1280px;
+}
+
+/* hot */
+.hot {
+  width: 960px;
+  font-size:small;
+  background-color: antiquewhite;
+}
+
+.hot > .hot1 { /* 왼쪽 X */
+  float : left;
+  position: relative;
+  text-align: center;
+  padding-left: 90px;
+}
+
+.hot > .hot2 { /* 오른쪽 X */
+  position: relative;
+  text-align: center; 
+}
+
+/* footer */
+footer {
+  width: 960px;
+  background-color:aquamarine;
+}
+
+footer > ul { /* 회사소개 ~ 사업자정보확인 */
+  padding : 0;
+  list-style: none; /* 리스트 속성 제거 */
+}
+
+footer > ul > li { /* 회사소개 ~ 사업자정보확인 */
+  padding: 0 10px; /* 글자간 간격 확인 */
+  float : left;
+  text-align: center;
+}
+
+footer > ul > li > a { /* 회사소개 ~ 사업자정보확인 */
+  text-decoration: none; /* a태그 밑줄 제거 */
+}
+
+footer > ul > li > a:hover { 
+  color : red; /* 마우스 커서를 올렸을 때 */
+  cursor: auto;
+}
+
+footer > .company { /* YaCamping Corp */
+  float: right;
+}
+
