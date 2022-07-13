@@ -14,12 +14,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
-  <style>
-    .slick-prev:before,
-    .slick-next:before {
-      color: #444444;
-    }
-  </style>
   <script>
     $(function () {
       $('.sale').slick({
@@ -28,6 +22,8 @@
         autoplaySpeed: 3000, // 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
         slidesToShow: 4, // 한 화면에 보여질 컨텐츠 개수
         slidesToScroll: 1, //스크롤 한번에 움직일 컨텐츠 개수
+        arrows: false,
+        dots: true
       });
     });
   </script>
@@ -39,7 +35,7 @@
     <header>
       <div class="head">
         <img src="https://dummyimage.com/150x100/c2c2c2/000000&text=+LOGO" class="logo" alt="로고">
-        <button type="button" class="btn" onClick="location.href='#'">Login</button>
+        <button type="button" class="btn" onClick="location.href='login.html'">Login</button>
         <input type="search" class="search" name="search">
       </div>
     </header>
