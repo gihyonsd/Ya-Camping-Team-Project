@@ -5,11 +5,13 @@
   font-family: "Noto Sans KR", sans-serif;
 }
 
+/*링크부분 스타일*/
 a {
   text-decoration: none;
   color: black;
 }
 
+/*전체 배경영역*/
 .wrap {
   width: 100%;
   height: 100vh;
@@ -19,6 +21,7 @@ a {
   background: rgba(0, 0, 0, 0.1);
 }
 
+/*로그인 박스 영역*/
 .login {
   width: 450px;
   height: 600px;
@@ -30,12 +33,14 @@ a {
   flex-direction: column;
 }
 
+/*타이틀 스타일*/
 h2 {
   color: #7DB249;
   font-size: 2em;
   text-shadow: 0.5px 0.5px 0.5px gray;
 }
 
+/*아이디 입력란*/
 .login_id {
   margin-top: 20px;
   width: 360px;
@@ -51,6 +56,7 @@ h2 {
   background-color: #F2F2F2;
 }
 
+/*패스워드 입력란*/
 .login_pw input {
   width: 360px;
   height: 50px;
@@ -61,6 +67,7 @@ h2 {
   background-color: #F2F2F2;
 }
 
+/*체크박스 영역*/
 .login_etc {
   padding: 10px;
   width: 360px;
@@ -75,17 +82,20 @@ h2 {
   accent-color: #7DB249;
 }
 
+/*회원가입 메세지*/
 .message {
   position: relative;
   top: 30px;
   font-size: 14px;
 }
 
+/*회원가입 링크*/
 .message a {
   color: #7DB249;
   font-weight: bold;
 }
 
+/*로그인 버튼*/
 .submit input {
   width: 360px;
   height: 35px;
@@ -99,6 +109,7 @@ h2 {
   letter-spacing: 2px;
 }
 
+/*SNS 로그인 영역 시작 라인*/
 .line {
   margin: 15px;
   text-align: center;
@@ -126,6 +137,7 @@ h2 {
   width: 115px;
 }
 
+/*SNS 로그인 */
 .sns_login input {
   width: 360px;
   height: 35px;
@@ -135,6 +147,7 @@ h2 {
   margin-right: 30px;
 }
 
+/*카카오 input*/
 .kakao {
   background-color: #FEE500;
   color: #181600;
@@ -142,6 +155,7 @@ h2 {
   font-weight: bold;
 }
 
+/*SNS-카카오/네이버 이미지*/
 .kakao_login img, .naver_login img {
   width: 30px;
   height: 30px;
@@ -150,6 +164,7 @@ h2 {
   top: 10px;
 }
 
+/*네이버 input*/
 .naver {
   background-color: #03C75A;
   color: #FFFFFF;
