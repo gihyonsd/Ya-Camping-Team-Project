@@ -193,6 +193,16 @@ input::placeholder {
   margin: 30px;
 }
 
+/*슬라이드 밑에 점 css*/
+.sale .slick-dots {
+  position: absolute;
+  bottom: 10px;
+}
+
+/*슬라이드 부분 마진*/
+.sale.slick-initialized.slick-slider.slick-dotted {
+  margin: 0 auto;
+}
 
 /*위클리 TOP 캠핑장 css*/
 .weekly {
