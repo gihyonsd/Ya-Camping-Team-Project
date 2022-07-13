@@ -85,8 +85,10 @@ h2 {
 /*회원가입 메세지*/
 .message {
   position: relative;
-  top: 30px;
   font-size: 14px;
+  margin-bottom: 50px;
+  top: 40px;
+  
 }
 
 /*회원가입 링크*/
@@ -99,14 +101,18 @@ h2 {
 .submit input {
   width: 360px;
   height: 35px;
-  margin-top: 50px;
   border: 0;
   outline: none;
   background:#7DB249;
   color: white;
   font-size: 0.9em;
   font-weight: bold;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+  
+}
+
+.submit input:hover {
+  cursor: pointer;
 }
 
 /*SNS 로그인 영역 시작 라인*/
@@ -171,3 +177,8 @@ h2 {
   font-size: 0.9em;
   font-weight: bold;
 }
+
+.kakao_login:hover, .kakao_login input:hover, .naver_login:hover, .naver_login input:hover {
+  cursor: pointer;
+}
+
