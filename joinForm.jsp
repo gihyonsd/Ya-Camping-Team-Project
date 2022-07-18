@@ -19,7 +19,7 @@
 </head>
 <body>
 <section id = "joinformArea">
-<form name="joinform" action="./memberJoinAction.me" method="post" onsubmit="return formCheck1()">
+<form name="joinform" action="./memberJoinAction.me" method="post" >
 
 <table>
 	<tr>
@@ -29,14 +29,14 @@
 	</tr>
 	<tr>
 		<td><label for = "ID">아이디 </label> </td>
-		<td><input type="text" name="ID" id = "ID"/></td>
+		<td><input type="text" name="ID" id = "ID" /></td>
 	</tr>
 	<tr>
 		<td><label for = "PASSWD">비밀번호 </label></td>
 		<td><input type="password" name="PASSWD" id = "PASSWD" required /></td>
 	</tr>
 	<tr>
-		<td><label for = "PASSWD">비밀번호확인 </label></td>
+		<td><label for = "PASSWD">비밀번호 확인 </label></td>
 		<td><input type="password" name="PASSWD2" id = "PASSWD2" required /></td>
 	</tr>
 	<tr>
