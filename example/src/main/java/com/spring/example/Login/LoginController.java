@@ -1,6 +1,8 @@
 package com.spring.example.Login;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
@@ -25,15 +27,28 @@ public class LoginController {
     public String LoginPage() {
         return "/common/LoginPage";
     }
-
+    
+	private boolean rememberId(boolean rememberId) {
+		return rememberId;
+	}
+	
     @RequestMapping(value = "/Login", method = RequestMethod.POST)
     public String Login(@RequestParam("id") String id
-                       , @RequestParam("password") String password, HttpServletRequest request) throws Exception {
+                       , @RequestParam("password") String password, HttpServletRequest request,HttpServletResponse response, boolean rememberId) throws Exception {
 
         String path = "";
-
+        
         MemberVO vo = new MemberVO();
-
+        
+		if(rememberId(rememberId)) {
+			Cookie cookie = new Cookie("id", id);
+			response.addCookie(cookie);
+		}else {
+			Cookie cookie = new Cookie("id", id);
+			cookie.setMaxAge(0);
+			response.addCookie(cookie);
+		}
+		
         vo.setId(id);
         vo.setPassword(password);
 
