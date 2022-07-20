@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<% String id = (String)session.getAttribute("id"); %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,7 +38,11 @@
     <header>
       <div class="head">
         <img src="https://dummyimage.com/150x100/c2c2c2/000000&text=+LOGO" class="logo" alt="로고">
+        <%if(id == null) { %>
         <a href="/Login"><input type="button" class="btn" value="login"></a>
+        <%} else {%>
+        <a href="/Logout"><input type="button" class="btn" value="logout"></a>
+        <% } %>
         <input type="search" class="search" name="search">
       </div>
     </header>
