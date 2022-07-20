@@ -13,3 +13,4 @@ function Slide() {
 	slide[turn - 1].style.display = "block";
 	setTimeout(Slide, 3000);
 }
+   

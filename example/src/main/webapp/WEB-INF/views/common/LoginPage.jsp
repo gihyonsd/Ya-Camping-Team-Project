@@ -178,7 +178,7 @@ h2 {
 					<h2>야캠핑어때</h2>
 
 					<div class="login_id">
-						<input type="text" name="id" id="id" placeholder="ID">
+						<input type="text" name="id" id="id" value="${cookie.id.value}" placeholder="ID">
 					</div>
 
 					<div class="login_pw">
@@ -188,7 +188,7 @@ h2 {
 
 					<div class="login_etc">
 						<div class="checkbox">
-							<input type="checkbox"> 아이디 저장하기
+							<input type="checkbox" ${empty cookie.id.value ? "":"checked" } name="rememberId"> 아이디 저장하기
 						</div>
 
 						<div class="forgot_id_pw">
@@ -222,6 +222,5 @@ h2 {
 			</div>
 		</form>
 	</section>
-
 </body>
 </html>
