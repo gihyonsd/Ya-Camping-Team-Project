@@ -198,7 +198,7 @@ h2 {
 					</div>
 
 					<p class="message">
-						아직 회원이 아니신가요? <a href="#">회원가입</a>
+						아직 회원이 아니신가요? <a href="/register">회원가입</a>
 					</p>
 
 					<div class="submit">
