@@ -16,4 +16,8 @@ public class MemberDao {
         return mybatis.selectOne("Member.Login", vo);
     }
 
+	public void register(MemberVO vo) {
+		mybatis.insert("Member.register", vo);
+	}
+
 }
