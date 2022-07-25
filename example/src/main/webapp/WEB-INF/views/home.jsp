@@ -9,7 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>home</title>
-  <link href="${path}/resources/css/style.css" rel="stylesheet"/>
+  <link href="resources/css/style.css" rel="stylesheet"/>
   <!-- 제이쿼리 불러오기 -->  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
@@ -199,7 +199,7 @@
     </footer>
     </div>
   </div>
-  <script src="${path}/resources/js/script.js"></script>
+  <script src="resources/js/script.js"></script>
 </body>
 
 </html>

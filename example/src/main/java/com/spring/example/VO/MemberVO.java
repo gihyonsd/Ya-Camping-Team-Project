@@ -1,7 +1,8 @@
 package com.spring.example.VO;
 
 public class MemberVO {
-    private String id;
+	private int user_num;
+	private String id;
     private String password;
     private String name;
     private String nickname;
@@ -11,6 +12,14 @@ public class MemberVO {
     private String address;
     private String gender;
 
+    public int getUser_num() {
+		return user_num;
+	}
+
+	public void setUser_num(int user_num) {
+		this.user_num = user_num;
+	}
+	
     public String getName() {
 		return name;
 	}
