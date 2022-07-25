@@ -21,8 +21,9 @@ public class MemberServiceImpl implements MemberService{
     }
 
 	@Override
-	public void memberJoin(MemberVO vo) throws Exception {
+	public void register(MemberVO vo) throws Exception {
 		memberDao.register(vo);
-		
 	}
+
+
 }
