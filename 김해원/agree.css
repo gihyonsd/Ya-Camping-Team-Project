@@ -16,7 +16,7 @@
 a {
   text-decoration: none;
   color: #7DB249;
-  font-weight: bold;
+  font-size: 14px;
 }
 
 .wrap {
@@ -70,9 +70,17 @@ a {
   margin: 10px;
 }
 
+.agree_ch {
+  font-size: 18px;
+}
+
 /*체크항목 개별*/
 .agreemenu {
   margin: 10px;
+}
+
+.agree_main {
+  font-size: 14.5px;
 }
 
 .must {
@@ -152,6 +160,8 @@ a {
 .close {
   margin-top: 2%;
   text-align: center;
+  background-color: #7DB249;
+  color: white;
 }
 
 /*체크박스 색깔*/

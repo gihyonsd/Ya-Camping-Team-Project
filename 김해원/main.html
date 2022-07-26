@@ -5,62 +5,286 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>야캠핑어때</title>
-  <link type="text/css" rel="stylesheet" href="style.css">
+  <title>home</title>
+  <link href="style.css" rel="stylesheet" />
+  <!-- 제이쿼리 불러오기 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+  <!-- Slick 불러오기 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+  <script>
+    $(function () {
+      $('.salecontent').slick({
+        infinite: true, //양방향 무한 모션
+        autoplay: true, //자동 스크롤 사용 여부
+        autoplaySpeed: 3000, // 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
+        slidesToShow: 4, // 한 화면에 보여질 컨텐츠 개수
+        slidesToScroll: 1, //스크롤 한번에 움직일 컨텐츠 개수
+        arrows: false,
+        dots: true
+      });
+    });
+  </script>
 </head>
 
 <body>
   <div class="container">
-    <!--카테고리-->
-    <div class="category">
-      <!--카테고리 중 캠핑-->
-      <div class="category_menu">
-        <a href="#"><img src="image/camping_icon.png">
-          <p class="menu_name">캠핑</p>
-        </a>
+    <!--헤더-->
+    <header>
+      <div class="head">
+        <img src="image/logo-1.png" class="logo" alt="로고">
+        <div class="logotitle">야캠핑어때
+        </div>
+        <div class="login">
+          <a href="/Login">
+            <img src="image/user-logo.png" class="userlogo" alt="사용자로고">
+          </a>
+        </div>
+
+      </div>
+    </header>
+    <div class="backwhite">
+      <!--이미지 슬라이드-->
+      <div class="slide">
+        <div class="titleimage">
+          <a href="#">
+            <img src="image/event1.png" alt="슬라이드메뉴">
+          </a>
+          <a href="#">
+            <img src="image/event2.png" alt="슬라이드메뉴">
+          </a>
+          <a href="#">
+            <img src="image/event3.png" alt="슬라이드메뉴">
+          </a>
+          <a href="#">
+            <img src="image/event4.png" alt="슬라이드메뉴">
+          </a>
+        </div>
+      </div>
+      <!--카테고리-->
+      <div class="category">
+        <!--카테고리 중 캠핑-->
+        <div class="category_menu">
+          <a href="#"><img src="image/camping_icon.png">
+            <p class="menu_name">캠핑</p>
+
+          </a>
+        </div>
+
+        <!--카테고리 중 글램핑-->
+        <div class="category_menu">
+          <a href="#"><img src="image/glamping_icon.png">
+            <p class="menu_name">글램핑</p>
+          </a>
+        </div>
+
+        <!--카테고리 중 카라반-->
+        <div class="category_menu">
+          <a href="#"><img src="image/caravan_icon.png">
+            <p class="menu_name">카라반</p>
+
+          </a>
+        </div>
+
+        <!--카테고리 중 펜션-->
+        <div class="category_menu">
+          <a href="#"><img src="image/pension_icon.png">
+            <p class="menu_name">펜션</p>
+          </a>
+        </div>
+      </div>
+      <!--검색-->
+      <div class="main_search">
+        <div class="search_box">
+          <!--체크인/체크아웃-->
+          <input type="date" class="search_date">
+          <input type="date" class="search_date">
+
+          <!--지역선택-->
+          <img src="image/pin.png"><input type="text" class="search_region" placeholder="지역 선택">
+
+          <!--카테고리 선택-->
+          <img src="image/hashtag.png"><input type="text" class="search_category" placeholder="카테고리 선택">
+        </div>
+
+        <!--검색버튼-->
+        <button class="search_btn">검색</button>
       </div>
 
-      <!--카테고리 중 글램핑-->
-      <div class="category_menu">
-        <a href="#"><img src="image/glamping_icon.png">
-          <p class="menu_name">글램핑</p>
-        </a>
+      <!--세일 목록-->
+      <div class="salecam">
+        <div class="sale">
+          <div class="saletitle">특가상품</div>
+          <a href="#">
+            <div class="more">더보기 ></div>
+          </a>
+        </div>
+
+        <div class="salecontent">
+
+          <div class="saletext">
+            <a href="#">
+              <img class="sale-img" src="image/a1.jpg">
+              <div class="sale-cam-title">오솔길 캠핑장</div>
+              <div class="sale-cam-ad">경북 경주시 산내면</div>
+              <div class="sale-cam-pr">35,000~</div>
+            </a>
+          </div>
+
+          <div class="saletext">
+            <a href="#">
+              <img class="sale-img" src="image/a2.jpg">
+              <div class="text">
+                <div class="sale-cam-title">캠핑 플레이</div>
+                <div class="sale-cam-ad">경기 가평군 북면</div>
+                <div class="sale-cam-pr">45,000~</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="saletext">
+            <a href="#">
+              <img class="sale-img" src="image/a3.jpg">
+              <div class="text">
+                <div class="sale-cam-title">바다풍경 캠핑장</div>
+                <div class="sale-cam-ad">경남 고성군 고류면</div>
+                <div class="sale-cam-pr">40,000~</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="saletext">
+            <a href="#">
+              <img class="sale-img" src="image/a4.jpg">
+              <div class="text">
+                <div class="sale-cam-title">송어와 캠핑장</div>
+                <div class="sale-cam-ad">강원 평창군 용평면</div>
+                <div class="sale-cam-pr">55,000~</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="saletext">
+            <a href="#">
+              <img class="sale-img" src="image/a5.jpg">
+              <div class="text">
+                <div class="sale-cam-title">캠핑드림</div>
+                <div class="sale-cam-ad">충북 태안군 근흥면</div>
+                <div class="sale-cam-pr">55,000~</div>
+              </div>
+            </a>
+          </div>
+
+        </div>
       </div>
 
-      <!--카테고리 중 카라반-->
-      <div class="category_menu">
-        <a href="#"><img src="image/caravan_icon.png">
-          <p class="menu_name">카라반</p>
+      <!--위클리 top 캠핑장 태그-->
+      <div class="w-title">
+        <div class="weekly-top">위클리 TOP 캠핑장</div>
+        <a href="#">
+          <div class="more">더보기 ></div>
         </a>
+      </div>
+      <!--위클리 top 캠핑장-->
+      <div class="weekly">
+
+        <!--위클리 top 캠핑장 container-->
+        <div class="weekly-container">
+          <!--위클리 top 캠핑장 img-->
+          <a href="#"><img class="weekly-img" src="image/t1.jpg"></a>
+
+          <!--위클리 top 캠핑장 설명-->
+          <p class="weekly-title">럭셔리 글램핑 W 풀빌라</p>
+          <p class="weekly-describe">산청으로 떠나는 하룻밤의 감성여행. 친절한 직원과 깨끗한 시설, 맛있는 음식, 즐거운 액티비티를 W 풀빌라에서 즐겨보세요!</p>
+          <div class="weekly-hashtag">
+            <div class="w-hashtag1">#커플여행</div>
+            <div class="w-hashtag2">#럭셔리여행</div>
+            <div class="w-hashtag3">#글램핑</div>
+            <div class="w-hashtag4">#액티비티</div>
+          </div>
+          <!--위클리 top 캠핑장 가격-->
+          <div class="w-price">
+            <div class="weekly-price">50,000원~</div>
+            <div class="w-p">예약가능</div>
+          </div>
+        </div>
+
+        <!--위클리 top 캠핑장 container-->
+        <div class="weekly-container">
+          <!--위클리 top 캠핑장 img-->
+          <a href="#"><img class="weekly-img" src="image/t1.jpg"></a>
+
+          <!--위클리 top 캠핑장 설명-->
+          <p class="weekly-title">럭셔리 글램핑 W 풀빌라</p>
+          <p class="weekly-describe">산청으로 떠나는 하룻밤의 감성여행. 친절한 직원과 깨끗한 시설, 맛있는 음식, 즐거운 액티비티를 W 풀빌라에서 즐겨보세요!</p>
+          <div class="weekly-hashtag">
+            <div class="w-hashtag1">#커플여행</div>
+            <div class="w-hashtag2">#럭셔리여행</div>
+            <div class="w-hashtag3">#글램핑</div>
+            <div class="w-hashtag4">#액티비티</div>
+          </div>
+          <!--위클리 top 캠핑장 가격-->
+          <div class="w-price">
+            <div class="weekly-price">50,000원~</div>
+            <div class="w-p">예약가능</div>
+          </div>
+        </div>
+
+
       </div>
 
-      <!--카테고리 중 펜션-->
-      <div class="category_menu">
-        <a href="#"><img src="image/pension_icon.png">
-          <p class="menu_name">펜션</p>
-        </a>
-      </div>
     </div>
 
-    <!--검색-->
-    <div class="search">
-      <div class="search_box">
-        <!--체크인/체크아웃-->
-        <input type="date" class="search_date">
-        <input type="date" class="search_date">
-
-        <!--지역선택-->
-        <img src="image/pin.png"><input type="text" class="search_region" placeholder="지역 선택">
-
-        <!--카테고리 선택-->
-        <img src="image/hashtag.png"><input type="text" class="search_category" placeholder="카테고리 선택">
+    <!-- hot -->
+    <div class="hot">
+      <p class="hot_banner">지금 뜨고 있는 캠핑장</p>
+      <div class="hot1">
+        <a href="#">
+          <img src="image/h1.jpg">
+        </a>
       </div>
-
-      <!--검색버튼-->
-        <button class="search_btn">검색</button>
+      <div class="hot2">
+        <a href="#">
+          <img src="image/h2.jpg">
+        </a>
+      </div>
     </div>
   </div>
+  <!-- 푸터 -->
 
+  <footer>
+
+    <div class="foot-com-corp">
+      <div class="foot-com">
+        <div class="com"><a href="#">회사소개&nbsp;</a></div>|
+        <div class="com"><a href="#">&nbsp;이용약관&nbsp;</a></div>|
+        <div class="com"><a href="#">&nbsp;개인정보처리방침&nbsp;</a></div>|
+        <div class="com"><a href="#">&nbsp;사업자정보확인</a></div>
+      </div>
+
+      <div class="corp">
+        @YaCamping Corp.
+      </div>
+
+    </div>
+    <div class="f-text">
+      <div class="foottext">
+        야캠핑어때는 통신판매 중개자로서 통신판매의 당사자가 아니며 상품의 예약,이용 및 환불 등과 관련한 의무와 책임 등 모든 거래에 대한 책임은 가맹점에게 있습니다.
+      </div>
+      <div class="foottext2">
+        <span style="font-weight: bold;">야캠핑어때 주식회사</span> | 소재지 : 경기 수원시 영통구 영통로217번길 6 3층 | 사업자번호 : 752-80-1234 |
+        고객센터 : 070-123-4567 | 메일 : yacamping@email.com
+      </div>
+      <div class="copy">Copyright 야캠핑어때 COMMUNICATION. All rights reserved.</div>
+    </div>
+
+
+  </footer>
+
+  </div>
+  <script src="script.js"></script>
 </body>
 
 </html>
