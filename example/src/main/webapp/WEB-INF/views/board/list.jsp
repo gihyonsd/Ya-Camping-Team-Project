@@ -27,12 +27,11 @@
 <div>
 	<div>
 		<div>
-
 			<div>
 				<table>
 					<thead>
 					</thead>
-
+					
 					<c:forEach items="${list}" var="board">
 						<tr>
 							<td>
@@ -40,55 +39,41 @@
 									<img src="<c:out value="${board.imageurl}" />" class="listimg">
 									<c:out value="${board.category}" />
 									<c:out value="${board.tel}" />
+									<fmt:formatDate value="${board.reservday}" pattern="yyyy-MM-dd"/>
 							</td>
 						</tr>
 					</c:forEach>
 				</table>
-				<div>
-					<div>
 
-						<form id='searchForm' action="/board/list" method='get'>
-							<input type='hidden' name='type' value='T' <c:out value="${pageMaker.cri.type eq 'T'}"/>>
-							<input type='hidden' name='type' value='C' <c:out value="${pageMaker.cri.type eq 'C'}"/>>
-							<input type='hidden' name='pageNum' value='<c:out value="${pageMaker.cri.pageNum}"/>' /> 
-							<input type='hidden' name='amount' value='<c:out value="${pageMaker.cri.amount}"/>' />
-						</form>
-					</div>
-				</div>
 				<div>
 					<ul>
-
 						<c:if test="${pageMaker.prev}">
 							<li class="paginate_button previous"><a
 								href="${pageMaker.startPage -1}">Previous</a></li>
 						</c:if>
-
 						<c:forEach var="num" begin="${pageMaker.startPage}"
 							end="${pageMaker.endPage}">
 							<li class="paginate_button  ${pageMaker.cri.pageNum == num ? "active":""} ">
 								<a href="${num}">${num}</a>
 							</li>
 						</c:forEach>
-
 						<c:if test="${pageMaker.next}">
 							<li class="paginate_button next"><a
 								href="${pageMaker.endPage +1 }">Next</a></li>
 						</c:if>
-
-
 					</ul>
 				</div>
 				<!--  end Pagination -->
 			</div>
+			
 			<form id='actionForm' action="/board/list" method='get'>
 				<input type='hidden' name='pageNum' value='${pageMaker.cri.pageNum}'>
 				<input type='hidden' name='amount' value='${pageMaker.cri.amount}'>
-
-				<input type='hidden' name='type'
-					value='<c:out value="${ pageMaker.cri.type }"/>'>
-					<input type='hidden' name='keyword' value='<c:out value="${ pageMaker.cri.keyword }"/>'>
-					<input type='hidden' name='category' value='<c:out value="${ pageMaker.cri.category }"/>'>
-
+				<input type='hidden' name='type' value='<c:out value="${ pageMaker.cri.type }"/>'>
+				<input type='hidden' name='startDate' value='<fmt:formatDate value="${pageMaker.cri.startDate }" pattern="yyyy-MM-dd"/>'>
+				<input type='hidden' name='endDate' value='<fmt:formatDate value="${pageMaker.cri.endDate }" pattern="yyyy-MM-dd"/>'>
+				<input type='hidden' name='keyword' value='<c:out value="${ pageMaker.cri.keyword }"/>'>
+				<input type='hidden' name='category' value='<c:out value="${ pageMaker.cri.category }"/>'>
 			</form>
 		</div>
 		<!--  end panel-body -->

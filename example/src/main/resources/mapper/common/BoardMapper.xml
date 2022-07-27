@@ -19,6 +19,12 @@
 							faclt_nm like '%'||#{keyword}||'%' and
 							category like '%'||#{category}||'%'
 						</when>
+						<when test="startDate != null and endDate != null">
+						<![CDATA[
+       					 	reservday >= #{startDate} AND reservday <= #{endDate}
+       					]]>and faclt_nm like '%'||#{keyword}||'%' and
+							category like '%'||#{category}||'%'
+						</when>
 					</choose>
 				</trim>
 			</foreach>
@@ -34,7 +40,7 @@
    	from
         (
         	select /*+INDEX_DESC(tbl_board pk_board) */
-            rownum rn, bno, faclt_nm, imageurl, tel, category
+            rownum rn, bno, faclt_nm, imageurl, tel, category, reservday
             from tbl_board
             where 	
     ]]>
