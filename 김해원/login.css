@@ -1,8 +1,24 @@
+/*본문 폰트*/
+@font-face {
+  font-family: 'SUIT-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*헤드 타이틀 폰트*/
+@font-face {
+  font-family: 'Cafe24Ssurround';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: 'SUIT-Regular';
 }
 
 /*링크부분 스타일*/
@@ -33,11 +49,16 @@ a {
   flex-direction: column;
 }
 
+.login img {
+  width: 40px;
+  height: 40px;
+}
+
 /*타이틀 스타일*/
 h2 {
   color: #7DB249;
   font-size: 2em;
-  text-shadow: 0.5px 0.5px 0.5px gray;
+  font-family: 'Cafe24Ssurround';
 }
 
 /*아이디 입력란*/

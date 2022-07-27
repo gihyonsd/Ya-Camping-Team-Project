@@ -1,6 +1,15 @@
+/*본문 폰트*/
 @font-face {
-  font-family: 'GongGothicMedium';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+  font-family: 'SUIT-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*헤드 타이틀 폰트*/
+@font-face {
+  font-family: 'Cafe24Ssurround';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -10,7 +19,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'GongGothicMedium';
+  font-family: 'SUIT-Regular';
 }
 
 /*제일 큰 wrap*/
@@ -42,20 +51,30 @@
 .header {
   display: flex;
   width: 280px;
+  position: relative;
+  left: 40px;
 }
 
 .header:hover {
   cursor: pointer;
 }
 
+.header img {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: 9px;
+}
+
 /*헤더 부분 글자(야캠핑어때)*/
 .header p {
   color: #7DB249;
-  font-size: 2.5em;
+  font-size: 2.2em;
   text-shadow: 0.5px 0.5px 0.5px gray;
   position: relative;
   top: 13px;
   height: 50px;
+  font-family: 'Cafe24Ssurround';
 }
 
 /*회원가입 작성 영역*/
@@ -90,10 +109,17 @@ select {
 .join_title {
   width: 150px;
   font-size: 14px;
-  font-weight: lighter;
+  font-weight: bold;
   letter-spacing: 2px;
   position: relative;
   left: 70px;
+}
+
+#check {
+  position: relative;
+  bottom: 15px;
+  left: 70px;
+  font-size: 12px;
 }
 
 /*input영역 중 class=enter*/
@@ -217,8 +243,10 @@ select {
 }
 
 li::after{
-  content: "│";
+  content: "|";
   align-items: center;
+  position: relative;
+  top: 2px;
 }
 
 li:last-child::after{
@@ -234,7 +262,8 @@ address {
 
 address .logo {
   color: #7DB249;
-  font-size: 11px;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 address .copy {

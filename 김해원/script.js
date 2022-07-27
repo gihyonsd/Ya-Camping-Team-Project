@@ -2,7 +2,7 @@ let turn = 0;
 Slide();
 
 function Slide() {
-	let slide = document.querySelectorAll(".titleimage > a > img");
+	let slide = document.querySelectorAll(".slideimg > a > img");
 	for (let i = 0; i < slide.length; i++) {
 		slide[i].style.display = "none";
 	}
