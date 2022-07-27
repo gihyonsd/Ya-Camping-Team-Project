@@ -98,16 +98,21 @@
     <div class="main_search">
       <div class="search_box">
         <!--체크인/체크아웃-->
-        <input type="date" class="search_date">
-        <input type="date" class="search_date">
-        <input type='hidden' name='type' value='T' <c:out value="${pageMaker.cri.type eq 'T'}"/>>
+       	<input type="hidden" name="pageNum" value=1>
+       	<input type="hidden" name="amount" value=4>
+       	<input type="hidden" name="type" value="">
+        <input type="date" class="search_date" name="startDate" value='startDate' <c:out value="${pageMaker.cri.startDate}"/>>  
+       
+        <input type="date" class="search_date" name="endDate" value='endDate' <c:out value="${pageMaker.cri.endDate}"/>> 
+        
         <!--지역선택-->
+       
         <img src="resources/image/pin.png"><input type="text" class="search_region" name="keyword" value='<c:out value="${pageMaker.cri.keyword}"/>' placeholder="지역 선택">
-		<input type='hidden' name='type' value='C' <c:out value="${pageMaker.cri.type eq 'C'}"/>>
         <!--카테고리 선택-->
+       
         <img src="resources/image/hashtag.png"><input type="text" class="search_category" name="category"  value='<c:out value="${pageMaker.cri.category}"/>' placeholder="카테고리 선택">
       </div>
-
+      
       <!--검색버튼-->
       <button class="search_btn">검색</button>
     </div>
@@ -204,5 +209,4 @@
   </div>
   <script src="resources/js/script.js"></script>
 </body>
-
 </html>

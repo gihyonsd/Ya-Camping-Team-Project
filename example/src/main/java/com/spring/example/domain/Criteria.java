@@ -1,5 +1,9 @@
 package com.spring.example.domain;
 
+import java.util.Date;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -16,6 +20,10 @@ public class Criteria {
 	private String type;
 	private String Keyword;
 	private String category;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private Date startDate;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private Date endDate;
 	
 	public Criteria() {
 		this(1,4);

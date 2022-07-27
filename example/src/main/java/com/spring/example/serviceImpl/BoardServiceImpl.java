@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Service;
 
 import com.spring.example.domain.BoardVO;
@@ -17,6 +18,7 @@ import lombok.extern.log4j.Log4j;
 
 @Primary
 @Service
+
 @AllArgsConstructor
 @Log4j
 public class BoardServiceImpl implements BoardService{
@@ -31,7 +33,7 @@ public class BoardServiceImpl implements BoardService{
 		
 		return mapper.read(bno);
 	}
-
+	
 	@Override
 	public List<BoardVO> getList(Criteria cri) {
 		
