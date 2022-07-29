@@ -16,6 +16,13 @@
   		width: 200px;
   		height: 200px;
   	}
+  	ul {
+  		list-style: none;
+  	}
+  	li {
+  		float: left;
+  		margin: 20px;
+  	}
   </style>
 </head>
 <body>
@@ -29,9 +36,7 @@
 		<div>
 			<div>
 				<table>
-					<thead>
-					</thead>
-					
+				
 					<c:forEach items="${list}" var="board">
 						<tr>
 							
@@ -80,7 +85,7 @@
 	</div>
 	<!-- end panel -->
 </div>
-</div>
+
 <!-- /.row -->
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -95,19 +100,17 @@
 
 						var result = '<c:out value="${result}"/>';
 
-						checkModal(result);
+						check(result);
 
 						history.replaceState({}, null, null);
 
-						function checkModal(result) {
+						function check(result) {
 
 							if (result === '' || history.state) {
 								return;
 							}
-
-							$("#myModal").modal("show");
-						}
-						
+						}	
+					
 						var actionForm = $("#actionForm");
 
 						$(".paginate_button a").on(

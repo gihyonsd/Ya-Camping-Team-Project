@@ -50,4 +50,11 @@ public class BoardServiceImpl implements BoardService{
 		return mapper.gettotalCount(cri);
 		
 	}
+
+	@Override
+	public void booking(BoardVO board) {
+		log.info("booking......." + board);
+		
+		mapper.insertSelectKey(board);
+	}
 }

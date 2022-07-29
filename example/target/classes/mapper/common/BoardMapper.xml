@@ -60,8 +60,9 @@
 	]]>
 
 	</select>
-	<select id="read" resultType="com.spring.example.domain.BoardVO">	
-		select * from tbl_board where bno = #{bno}
+	<select id="read" resultType="com.spring.example.domain.BoardVO">
+		select * from tbl_board where bno =
+		#{bno}
 	</select>
 
 	<select id="gettotalCount" resultType="int">
@@ -78,4 +79,15 @@
 			select * from tbl_board where rownum > 0
 		]]>
 	</select>
+	<insert id="insertSelectKey">
+		<selectKey keyProperty="bno" order="BEFORE"
+			resultType="int">
+			select seq_board.nextval from dual
+		</selectKey>
+
+		insert into test(bno, testname, testnum)SELECT bno,
+		faclt_nm, tel FROM tbl_board
+		where bno=#{bno}
+	</insert>
+
 </mapper>

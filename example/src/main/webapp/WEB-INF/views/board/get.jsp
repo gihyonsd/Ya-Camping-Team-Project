@@ -9,7 +9,11 @@
 <title>Insert title here</title>
 </head>
 <body>
+<form action="/board/booking" method="post">
+<c:out value="${board.bno}"/>
 <c:out value="${board.faclt_nm}"/><br>
 <c:out value="${board.tel}"/>
+<input type="submit" value="예약하기">
+</form>
 </body>
 </html>

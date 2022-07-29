@@ -13,4 +13,6 @@ public interface BoardService {
 	public List<BoardVO> getList(Criteria cri);
 		
 	public int getTotal(Criteria cri);
+	
+	public void booking(BoardVO board);
 }

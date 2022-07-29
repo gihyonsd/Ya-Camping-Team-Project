@@ -1,12 +1,17 @@
 package com.spring.example.controller;
 
-import org.springframework.format.annotation.DateTimeFormat;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.spring.example.domain.BoardVO;
 import com.spring.example.domain.Criteria;
 import com.spring.example.domain.PageDTO;
 import com.spring.example.service.BoardService;
@@ -43,5 +48,13 @@ public class BoardController {
 		model.addAttribute("board", service.get(bno));
 	}
 	
+	
+	@PostMapping("/booking")
+	public String booking(BoardVO board, RedirectAttributes rttr) {
+		log.info("booking: " + board);
+		service.booking(board);
+		rttr.addFlashAttribute("result", board.getBno());
+		return "redirect:/board/list";
+	}
 }
 
