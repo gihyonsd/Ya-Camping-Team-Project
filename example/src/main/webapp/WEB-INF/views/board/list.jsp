@@ -34,13 +34,13 @@
 					
 					<c:forEach items="${list}" var="board">
 						<tr>
-							<td>
-									<c:out value="${board.faclt_nm}" />
-									<img src="<c:out value="${board.imageurl}" />" class="listimg">
-									<c:out value="${board.category}" />
-									<c:out value="${board.tel}" />
-									<fmt:formatDate value="${board.reservday}" pattern="yyyy-MM-dd"/>
-							</td>
+							
+								<td><a href='/board/get?bno=<c:out value="${board.bno}"/>'>
+									<c:out value="${board.faclt_nm}" /></a></td>
+									<td><img src="<c:out value="${board.imageurl}" />" class="listimg"></td>
+									<td><c:out value="${board.category}" /></td>
+									<td><c:out value="${board.tel}" /></td>
+									<td><fmt:formatDate value="${board.reservday}" pattern="yyyy-MM-dd"/></td>
 						</tr>
 					</c:forEach>
 				</table>

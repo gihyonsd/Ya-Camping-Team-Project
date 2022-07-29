@@ -13,17 +13,21 @@
 					<choose>
 						<when test="type == 'T'.toString()">
 							faclt_nm like '%'||#{keyword}||'%' and
-							category like '%'||#{category}||'%'
+							category
+							like '%'||#{category}||'%'
 						</when>
 						<when test="type == 'C'.toString()">
 							faclt_nm like '%'||#{keyword}||'%' and
-							category like '%'||#{category}||'%'
+							category
+							like '%'||#{category}||'%'
 						</when>
 						<when test="startDate != null and endDate != null">
 						<![CDATA[
        					 	reservday >= #{startDate} AND reservday <= #{endDate}
-       					]]>and faclt_nm like '%'||#{keyword}||'%' and
-							category like '%'||#{category}||'%'
+       					]]>and
+							faclt_nm like '%'||#{keyword}||'%' and
+							category like
+							'%'||#{category}||'%'
 						</when>
 					</choose>
 				</trim>
@@ -56,20 +60,22 @@
 	]]>
 
 	</select>
+	<select id="read" resultType="com.spring.example.domain.BoardVO">	
+		select * from tbl_board where bno = #{bno}
+	</select>
 
 	<select id="gettotalCount" resultType="int">
 		select count(*) from tbl_board
 		where
 		<include refid="criteria"></include>
 
-		bno > 0
+		rownum > 0
 	</select>
 	<select id="getList"
 		resultType="com.spring.example.domain.BoardVO">
 	
 		<![CDATA[
-			select * from tbl_board where bno > 0
+			select * from tbl_board where rownum > 0
 		]]>
-
 	</select>
 </mapper>
