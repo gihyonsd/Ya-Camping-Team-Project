@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>캠핑장 상세정보</title>
+  <link href="detail_info.css" rel="stylesheet" />
+  <!-- 제이쿼리 불러오기 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard-polyfill/2.8.6/clipboard-polyfill.js"></script>
+</head>
+
+<body>
+  <!--전체영역 감싸기-->
+  <div class="container">
+
+    <!--전체 컨텐츠 영역-->
+    <div class="allcontent">
+
+      <!-----------------헤더 시작----------------->
+      <header class="header">
+        <div class="head">
+          <!--로고이미지&타이틀-->
+          <img src="image/logo-1.png" class="logo" alt="로고">
+          <div class="logotitle">야캠핑어때
+          </div>
+
+          <!--로그인아이콘(유저아이콘)-->
+          <div class="login">
+            <a href="/Login">
+              <img src="image/user-logo.png" class="userlogo" alt="사용자로고">
+            </a>
+          </div>
+      </header>
+      <!-----------------헤더 끝----------------->
+
+      <!-----------------섬네일 이미지 클릭 시 확대 시작----------------->
+
+      <div class="main_img">
+
+        <!--확대된 이미지-->
+        <div id="zoom_img">
+          <img src="image/c3.jpg" alt="image1" class="zoomimg">
+        </div>
+
+        <!--섬네일 리스트-->
+        <ul class="thumb">
+
+          <!--섬네일1-->
+          <li class="on">
+            <a href="#">
+              <img src="image/c3.jpg" alt="image1">
+            </a>
+          </li>
+          <!--섬네일2-->
+          <li>
+            <a href="#">
+              <img src="image/c5.jpg" alt="image2">
+            </a>
+          </li>
+          <!--섬네일3-->
+          <li>
+            <a href="#">
+              <img src="image/c6.jpg" alt="image3">
+            </a>
+          </li>
+          <!--섬네일4-->
+          <li>
+            <a href="#">
+              <img src="image/c14.jpg" alt="image4">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-----------------섬네일 이미지 클릭 시 확대 끝----------------->
+
+      <!-----------------메일 타이틀 시작----------------->
+
+      <div class="main_title">
+
+        <!--해쉬태그-->
+        <div class="reco_hashtag">
+          <div class="hashtag">#실시간예약</div>
+          <div class="hashtag">#포인트적립</div>
+          <div class="hashtag">#포인트사용</div>
+          <div class="hashtag">#양도가능</div>
+        </div>
+        <br>
+        <div class="title">
+          <h2>캠핑플레이</h2>
+          <h4>0504-2016-4022</h4>
+          <div class="address">
+            <input id="myInput" value="경기 가평군 북면 논남기길 468-33 (적목리)" readonly>
+            <button onclick="copy_to_clipboard()"><img src="image/copy.png" alt="주소 복사">
+              <p>주소 복사</p>
+            </button>
+          </div>
+          <div class="price">55,000원~</div>
+        </div>
+
+        <div class="visit">
+          최근 한달 동안 <span>1,379명</span> 방문 | <span>64명</span>이 예약하였습니다.
+        </div>
+      </div>
+
+      <div class="introduce">
+        <div class="intro">캠핑장 소개</div>
+        <div class="intro_detail">
+          <div class="box">
+            <div class="content">
+              *** (예약은 찜하신후 5시간내 입급 완료시 예약완료)***<br>
+
+              여름에도 저녁 시간(22도에서 24도 유지) 모기없고 시원한 계곡이 있는 소형 캠핑장<br>
+
+              필독::: 예약 취소시(-1,000원) 차감후 환불 필독**장작반입금지 매점에서 초A급 판매**<br>
+
+              1.데크 포함 모든 싸이트 텐트(대형), 차박(모든유형), 카라반(700급)까지== {모두대형싸이트}<br>
+
+              투폴딩, 캠팡카(35인승)까지 모두 캠핑 가능한 대형 싸이트로 운영== {모두 대형싸이트}<br>
+
+              2..반려견은 짖지않는 아이만 입장 가능[꼭 전화로 사전 문의] 후 예약하세요<br>
+
+              3. 장작 반입 금지 매점에서 판매<br>
+
+              4 동계장박(12월1일부터 4월30일까지) 선예약 환영 (홍천에서 가까운 인제 내린천휴게소근처)<br>
+
+              5. 주의!! 꼭꼭꼭 내린천휴게소를 경유하여 인제ic로 나오셔야 길이 좋아요<br>
+
+              6.여름 저녁 시간엔 22~24도를 유지하는 시원한 곳 동계장박시 바람이 없어 겨울장박에 최적화 소형캠핑장<br>
+
+              7. 상시 관리인상주 솔캠하기 안전하고 쾌적한 조용한 캠핑장<br>
+
+              입실 PM 2시 / 퇴실 PM 1시<br>
+
+              **** 매너타임 PM11~ AM 8시까지 엄수요망 ****<br>
+
+              캠핑장 인근 3km내 다양한 편의 시설 존재<br>
+
+              하나로마트. 대형슈펴.약국.소방서.우체국.농협.보건소,소방서,파출소,<br>
+
+              주유소 .커피숍.학교운동장.정육점.피자치킨.중국집.막국수.다양한 음식점<br>
+
+              서울기준 양양,강릉 중간지점으로 1시간내 강원도내 이동 가능<br>
+
+              다양한 음식점등 존재해요. 배달가능한 다수의 편의 시설이 있어요<br>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <script src="detail_info.js"></script>
+</body>
+
+</html>

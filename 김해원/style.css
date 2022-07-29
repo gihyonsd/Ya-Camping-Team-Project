@@ -386,7 +386,7 @@ input::placeholder {
 
 /*추천캠핑장 설명 중 해쉬태그 디자인*/
 .hashtag {
-  border: 1px solid gray;
+  border: 1px solid #D9D9D9;
   border-radius: 10px;
   padding: 3px;
   font-size: 12px;
