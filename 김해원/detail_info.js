@@ -1,12 +1,13 @@
-/*섬네일 이미지*/
+/*섬네일 이미지 시작*/
 $(".thumb li a").click(function () {
   var address = $(this).children("img");
   $("#zoom_img img").attr("src", address.attr("src")).attr("alt", address.attr("alt"));
   $(this).parent().addClass("on").siblings().removeClass("on");
   return false;
 });
+/*섬네일 이미지 끝*/
 
-/*주소 복사*/
+/*주소 복사 시작*/
 function copy_to_clipboard() {
   var copyText = document.getElementById('myInput');
    // 지정된 내용을 강조한다.
@@ -16,8 +17,9 @@ function copy_to_clipboard() {
   document.execCommand("Copy");
   alert('주소가 스크립트에 복사되었습니다.');
 }
+/*주소 복사 끝*/
 
-/*캠핑장 소개 더보기/접기*/
+/*캠핑장 소개 더보기/접기 시작*/
 $(document).ready(function(){
 
   $('.box').each(function(){
@@ -41,18 +43,20 @@ $(document).ready(function(){
       // btn_more.bind('click',toggle_content);
 
       function toggle_content(){
-          if($(this).hasClass('short')){
+        if($(this).hasClass('short')){            
               // 접기 상태
               $(this).html('더보기');
-              content.html(content_txt_short)
+              content.html(content_txt_short);
               $(this).removeClass('short');
+             
           }else{
               // 더보기 상태
               $(this).html('접기');
               content.html(content_txt);
               $(this).addClass('short');
-
           }
       }
   });
 });
+/*캠핑장 소개 더보기/접기 끝*/
+
