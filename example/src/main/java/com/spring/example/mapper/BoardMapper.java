@@ -18,4 +18,5 @@ public interface BoardMapper {
 	public BoardVO read(int bno);
 	
 	public int gettotalCount(Criteria cri);
+	
 }

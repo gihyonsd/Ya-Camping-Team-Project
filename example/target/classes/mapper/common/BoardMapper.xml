@@ -60,7 +60,7 @@
 	]]>
 
 	</select>
-	<select id="read" resultType="com.spring.example.domain.BoardVO">	
+	<select id="read" resultType="com.spring.example.domain.BoardVO">
 		select * from tbl_board where bno = #{bno}
 	</select>
 
@@ -78,4 +78,6 @@
 			select * from tbl_board where rownum > 0
 		]]>
 	</select>
+
+
 </mapper>
