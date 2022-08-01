@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Service;
 
 import com.spring.example.domain.BoardVO;
@@ -51,10 +50,4 @@ public class BoardServiceImpl implements BoardService{
 		
 	}
 
-	@Override
-	public void booking(BoardVO board) {
-		log.info("booking......." + board);
-		
-		mapper.insertSelectKey(board);
-	}
 }

@@ -29,6 +29,7 @@
 <div>
 	<div>
 		<h1>캠핑장 리스트</h1>
+		id=<c:out value="${sessionScope.id}"/>
 	</div>
 </div>
 <div>
@@ -36,7 +37,6 @@
 		<div>
 			<div>
 				<table>
-				
 					<c:forEach items="${list}" var="board">
 						<tr>
 							

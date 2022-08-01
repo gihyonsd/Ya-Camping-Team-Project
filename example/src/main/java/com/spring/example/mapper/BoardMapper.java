@@ -19,7 +19,4 @@ public interface BoardMapper {
 	
 	public int gettotalCount(Criteria cri);
 	
-	public void insert(BoardVO board);
-	
-	public void insertSelectKey(BoardVO board);
 }

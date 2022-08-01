@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spring.example.mapper.BookingMapper">
+
+	<insert id="insert">
+		INSERT INTO TEST(reservid, id, bno, testname, testnum, today, reservday)SELECT #{reservid}, id, bno, faclt_nm, tel, sysdate, reservday FROM tbl_board, member
+		where bno=#{bno} and id=#{id}
+	</insert>
+
+</mapper>
