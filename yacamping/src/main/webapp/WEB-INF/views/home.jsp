@@ -39,6 +39,7 @@
 <body>
   <!--전체영역 감싸기-->
   <div class="container">
+
     <!--전체 컨텐츠 영역-->
     <div class="allcontent">
 
