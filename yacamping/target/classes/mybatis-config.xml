@@ -4,6 +4,6 @@
 
 <configuration>
     <typeAliases>
-          <typeAlias alias="MemberVO" type="com.spring.example.VO.MemberVO" />
+          <typeAlias alias="MemberVO" type="com.spring.yacamping.domain.MemberVO" />
     </typeAliases>
 </configuration>

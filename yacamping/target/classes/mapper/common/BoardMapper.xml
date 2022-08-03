@@ -3,7 +3,7 @@
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.spring.example.mapper.BoardMapper">
+<mapper namespace="com.spring.yacamping.mapper.BoardMapper">
 
 	<sql id="criteria">
 		<trim prefix="(" suffix=") AND " prefixOverrides="OR">
@@ -32,7 +32,7 @@
 	</sql>
 
 	<select id="getListWithPaging"
-		resultType="com.spring.example.domain.BoardVO">
+		resultType="com.spring.yacamping.domain.BoardVO">
 	
 	<![CDATA[
 	select
@@ -54,12 +54,13 @@
   	  where rn > (#{pageNum}-1)* #{amount}
 		
 	]]>
-
 	</select>
-	<select id="read" resultType="com.spring.example.domain.BoardVO">
+	<select id="read" resultType="com.spring.yacamping.domain.BoardVO">
 		select * from camp_info where campnum = #{campnum}
 	</select>
-
+	<select id="getall" resultType="com.spring.yacamping.domain.BoardVO">
+		select * from camp_info
+	</select>
 	<select id="gettotalCount" resultType="int">
 		select count(*) from camp_info
 		where
@@ -68,7 +69,7 @@
 		rownum > 0
 	</select>
 	<select id="getList"
-		resultType="com.spring.example.domain.BoardVO">
+		resultType="com.spring.yacamping.domain.BoardVO">
 	
 		<![CDATA[
 			select * from camp_info where rownum > 0

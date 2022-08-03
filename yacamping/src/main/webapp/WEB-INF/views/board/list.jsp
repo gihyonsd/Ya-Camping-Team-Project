@@ -45,6 +45,7 @@
 								<td><img src="<c:out value="${board.firstimageurl}" />" class="listimg"></td>
 						</tr>
 					</c:forEach>
+					
 				</table>
 
 				<div>

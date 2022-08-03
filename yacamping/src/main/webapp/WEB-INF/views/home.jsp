@@ -3,6 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>    
 <% String id = (String)session.getAttribute("id"); %>
+<c:set var = "path" value = "${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,15 +12,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>야캠핑어때</title>
-  <link href="resources/css/style.css" rel="stylesheet" />
+  <link href="${path}/resources/css/style.css" rel="stylesheet" />
   <!-- 제이쿼리 불러오기 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	
   <!-- Slick 불러오기 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
-
+   
   <!--특가상품 슬라이드 스크립트-->
   <script>
     $(function () {
@@ -39,7 +39,6 @@
 <body>
   <!--전체영역 감싸기-->
   <div class="container">
-
     <!--전체 컨텐츠 영역-->
     <div class="allcontent">
 
@@ -52,12 +51,21 @@
           <div class="logotitle">야캠핑어때
           </div>
 
-          <!--로그인아이콘(유저아이콘)-->
-          <div class="login">
-            <a href="/Login">
+ 		  <!--로그인아이콘(유저아이콘)-->
+          <ul class="login">
+            <li>
               <img src="resources/image/user-logo.png" class="userlogo" alt="사용자로고">
-            </a>
-          </div>
+            <ul class="menu">
+              <%if(id == null) {%> 
+              <li><a href="/Login">로그인</a></li>
+              <li><a href="/Agree">회원가입</a></li>
+              <% } else { %>
+              <li><a href="/Logout">로그아웃</a></li>
+              <li><a href="#">마이페이지</a></li>
+              <% } %>
+            </ul>
+            </li>
+          </ul>
         </div>
       </header>
       <!-----------------헤더 끝----------------->
