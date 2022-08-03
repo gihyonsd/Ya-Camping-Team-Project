@@ -57,6 +57,7 @@ a {
   right: 50px;
   top: 15px;
 }
+
 /*<타이틀> 공통*/
 .title {
   font-size: 16px;
@@ -66,6 +67,7 @@ a {
   left: 20px;
   top: 10px;
 }
+
 /*-----------------공통 CSS 끝-----------------*/
 
 /*-----------------헤더 시작-----------------*/
@@ -127,6 +129,50 @@ header {
 .userlogo:hover {
   cursor: pointer;
 }
+
+/*마우스 오버 시 드롭다운 메뉴*/
+
+.login ul {
+  list-style: none;
+  width: 150px;
+  float: right;
+}
+
+.login a {
+  text-decoration: none;
+}
+
+.login>li {
+  list-style: none;
+}
+
+.login>li>a {
+  display: block;
+  padding: 0 15px;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+}
+
+.login>li:hover .menu {
+  display: block;
+}
+
+.login .menu {
+  display: none;
+  position: absolute;
+  left: 770px;
+  top: 50px;
+  text-align: center;
+}
+
+.login .menu a {
+  display: block;
+  padding: 5px;
+  background-color:rgba(125, 178, 73, 0.7);/*까만색(0,0,0) 80% 불투명도*/
+  color: #fff;
+}
+
 
 /*-----------------헤더 끝-----------------*/
 
