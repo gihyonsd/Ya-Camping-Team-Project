@@ -221,7 +221,6 @@ header {
   /*가로 배치*/
   padding: 7px 196px;
   /**/
-  font-weight: bold;
   cursor: pointer;
   border-bottom: 1px solid #ddd;
 }

@@ -304,7 +304,7 @@ body {
   color: #3c3646;
   border: 1px solid #ddd;
   border-radius: 3px;
-  background-image: url(image/down1.png);
+  background-image: url(../image/down1.png);
   background-repeat: no-repeat;
   background-size: 30px 30px;
   background-position: 80px;
@@ -321,7 +321,7 @@ body {
 }
 
 .short {
-  background-image: url(image/up1.png);
+  background-image: url(../image/up1.png);
 }
 
 /*-----------------캠핑장 소개 끝-----------------*/
