@@ -14,6 +14,7 @@
 <form action="/board/booking?campnum=${board.campnum}&&startDate=<fmt:formatDate value="${setdate.startDate}" pattern="yyyy-MM-dd"/>&&endDate=<fmt:formatDate value="${setdate.endDate}" pattern="yyyy-MM-dd"/>" method="post">
 <input type="number" name="audult_no" value="audult_no">
 <input type="number" name="child_no" value="child_no">
+<input type="hidden" name="totalprice" value="<c:out value="${board.price}" />">
 <c:out value="${board.campnum}"/>
 <c:out value="${board.facltnm}"/><br>
 <input type="submit" value="예약하기">
