@@ -14,4 +14,9 @@
     	INSERT INTO MEMBER
     		VALUES(member_seq.nextval, #{id}, #{password}, #{name}, #{nickname}, #{phone}, #{birth}, #{email}, #{address}, #{gender})
     </insert>
+    <select id="readMember" resultType="com.spring.yacamping.domain.MemberVO">
+		select *
+		from MEMBER
+		where id=#{id}
+	</select>
 </mapper>

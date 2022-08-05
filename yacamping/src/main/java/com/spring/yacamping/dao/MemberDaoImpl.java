@@ -22,4 +22,10 @@ public class MemberDaoImpl implements MemberDao {
 		sql.insert(Namespace + ".register", vo);
 	}
 
+	@Override
+	public MemberVO readMember(String id) throws Exception {
+		MemberVO vo = sql.selectOne(Namespace + ".readMember", id); //괄호안의 물음표를 콤마뒤에 쓰는거임
+		return vo;
+	}
+
 }

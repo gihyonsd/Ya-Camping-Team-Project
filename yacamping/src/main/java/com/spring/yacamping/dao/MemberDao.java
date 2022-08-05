@@ -11,4 +11,5 @@ public interface MemberDao {
 
     public int Login(MemberVO vo) throws Exception;
     public void register(MemberVO vo) throws Exception;
+    public MemberVO readMember(String id) throws Exception;
 }

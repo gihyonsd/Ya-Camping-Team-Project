@@ -1,5 +1,7 @@
 package com.spring.yacamping.serviceImpl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +25,19 @@ public class MemberServiceImpl implements MemberService{
 	@Override
 	public void register(MemberVO vo) throws Exception {
 		memberDao.register(vo);
+	}
+
+	@Override
+	public MemberVO readMember(String id) {
+		MemberVO vo = null;
+		
+		try {
+			vo = memberDao.readMember(id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return vo;
 	}
 
 

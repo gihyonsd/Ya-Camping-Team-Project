@@ -60,15 +60,6 @@ $(document).ready(function () {
 });
 /*캠핑장 소개 더보기/접기 끝*/
 
-/*약도 지도 api*/
-var container = document.getElementById('map');
-var options = {
-  center: new kakao.maps.LatLng(37.3047857, 128.1647863),
-  level: 3
-};
-
-var map = new kakao.maps.Map(container, options);
-
 /*예약하기 클릭시 모달창*/
 const open = () => {
   document.querySelector(".modal").classList.remove("hidden");

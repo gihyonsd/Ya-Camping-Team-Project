@@ -39,7 +39,7 @@
 <body>
   <!--전체영역 감싸기-->
   <div class="container">
-
+	
     <!--전체 컨텐츠 영역-->
     <div class="allcontent">
 
@@ -62,7 +62,7 @@
               <li><a href="/Agree">회원가입</a></li>
               <% } else { %>
               <li><a href="/Logout">로그아웃</a></li>
-              <li><a href="#">마이페이지</a></li>
+              <li><a href="/mypage">마이페이지</a></li>
               <% } %>
             </ul>
             </li>

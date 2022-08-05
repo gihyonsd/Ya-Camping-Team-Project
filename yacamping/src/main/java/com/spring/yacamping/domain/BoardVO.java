@@ -13,6 +13,7 @@ import lombok.Data;
 @Data
 public class BoardVO {
 	private int campnum;
+	private String addr1;
 	private String facltnm;
 	private String featurenm;
 	private String firstimageurl;
@@ -24,5 +25,5 @@ public class BoardVO {
 	private String mapy;
 	private Date reservday;
 	private int price;
-	
+	private String tel;
 }
