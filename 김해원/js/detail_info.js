@@ -86,6 +86,8 @@ document.querySelector(".bg").addEventListener("click", close);
 
 
 
+
+
 /*카카오톡 공유*/
 Kakao.init('38e9e837edc41683d3baac69998bd7ee'); //js코드(kakao에서 받은것)
             

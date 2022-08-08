@@ -1,0 +1,170 @@
+/*헤드 타이틀 폰트*/
+@font-face {
+  font-family: 'Cafe24Ssurround';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*본문 폰트*/
+@font-face {
+  font-family: 'SUIT-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*----------------전체 & 공통 적용 시작-------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'SUIT-Regular';
+}
+
+a {
+  text-decoration: none;
+  color: #7DB249;
+  font-size: 14px;
+}
+
+.wrap {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  width: 450px;
+  height: 400px;
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/*타이틀 스타일*/
+.headermom {
+  width: 280px;
+  margin: 0 auto;
+  position: relative;
+  bottom: 30px;
+}
+
+/*header(로고 이미지+로고)*/
+.header {
+  display: flex;
+  width: 280px;
+  position: relative;
+  left: 45px;
+}
+
+.header:hover {
+  cursor: pointer;
+}
+
+/*헤더 부분 글자(야캠핑어때)*/
+.header p {
+  color: #7DB249;
+  font-size: 2em;
+  text-shadow: 0.5px 0.5px 0.5px gray;
+  position: relative;
+  top: 13px;
+  font-family: 'Cafe24Ssurround';
+}
+
+.header img {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: 8px;
+}
+
+/*----------------전체 & 공통 적용 끝-------------*/
+
+/*----------------예약 내용 시작-------------*/
+
+.reservation {
+  border: 1px solid red;
+  margin: 0 auto;
+}
+
+.reservation img {
+  width: 130px;
+  height: 90px;
+  border-radius: 5px;
+}
+
+.info {
+  display: inline-flex;
+  border: 1px solid yellowgreen;
+}
+
+.txt {
+  border: 1px solid blue;
+  margin-left: 20px;
+}
+
+/*----------------예약 내용 끝-------------*/
+
+
+/*----------------인원 시작-------------*/
+
+.people {
+  border: 1px solid purple;
+}
+
+.person {
+  border: 1px solid orange;
+  display: flex;
+}
+
+.person {
+  border: 1px solid blue;
+}
+
+.count {
+  border: 1px solid purple;
+}
+
+
+/*----------------인원 끝-------------*/
+
+
+/*----------------체크인아웃 시작-------------*/
+
+.date {
+  display: flex;
+}
+
+
+
+/*----------------체크인아웃 끝-------------*/
+
+/*----------------결제하기 버튼 시작-------------*/
+
+.nextbtn button{
+  width: 120px;
+  height: 30px;
+  border-radius: 0px;
+  border-style: none;
+  background-color: #E8E0A1;
+  margin: 0 auto;  
+  display: block;
+  position: relative;
+  top: 30px;
+}
+
+.nextbtn button a {
+  color: black;
+}
+
+.nextbtn button:hover {
+  cursor: pointer;
+}
+
+/*----------------결제하기 버튼 끝-------------*/
