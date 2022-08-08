@@ -28,4 +28,10 @@ public class BookingServiceImpl implements BookingService{
 		log.info("booking");
 		mapper.insert(booking);
 	}
+
+	@Override
+	public void bookingkakao(BookingVO booking) {
+		log.info("bookingkakao.............");
+		mapper.insertkakao(booking);
+	}
 }

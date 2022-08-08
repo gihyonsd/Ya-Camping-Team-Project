@@ -3,6 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>    
 <% String id = (String)session.getAttribute("id"); %>
+
 <c:set var = "path" value = "${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html lang="en">
@@ -45,7 +46,6 @@
 
       <!-----------------헤더 시작----------------->
       <header>
-
         <div class="head">
           <!--로고이미지&타이틀-->
           <img src="resources/image/logo-1.png" class="logo" alt="로고">
@@ -166,11 +166,11 @@
           <!--특가상품 1-->
           <div class="saletext">
             <a href="#">
-              <img class="sale_img" src="resources/image/a1.jpg">
+              <img class="sale_img" src="${data[0].firstimageurl }">
               <div class="saledetail">
-                <div class="sale_cam_title">오솔길 캠핑장</div>
-                <div class="sale_cam_ad">경북 경주시 산내면</div>
-                <div class="sale_cam_pr">35,000~</div>
+                <div class="sale_cam_title">${data[0].facltnm }</div>
+                <div class="sale_cam_ad">${data[0].addr1 }</div>
+                <div class="sale_cam_pr"><fmt:formatNumber value="${data[0].price}" pattern="#,###"/>~</div>
               </div>
             </a>
           </div>
@@ -178,11 +178,11 @@
           <!--특가상품 2-->
           <div class="saletext">
             <a href="#">
-              <img class="sale_img" src="resources/image/a2.jpg">
+              <img class="sale_img" src="${data[1].firstimageurl }">
               <div class="saledetail">
-                <div class="sale_cam_title">캠핑 플레이</div>
-                <div class="sale_cam_ad">경기 가평군 북면</div>
-                <div class="sale_cam_pr">45,000~</div>
+                <div class="sale_cam_title">${data[1].facltnm }</div>
+                <div class="sale_cam_ad">${data[1].addr1 }</div>
+                <div class="sale_cam_pr"><fmt:formatNumber value="${data[1].price}" pattern="#,###"/>~</div>
               </div>
             </a>
           </div>
@@ -190,11 +190,11 @@
           <!--특가상품 3-->
           <div class="saletext">
             <a href="#">
-              <img class="sale_img" src="resources/image/a3.jpg">
+              <img class="sale_img" src="${data[2].firstimageurl }">
               <div class="saledetail">
-                <div class="sale_cam_title">바다풍경 캠핑장</div>
-                <div class="sale_cam_ad">경남 고성군 고류면</div>
-                <div class="sale_cam_pr">40,000~</div>
+                <div class="sale_cam_title">${data[2].facltnm }</div>
+                <div class="sale_cam_ad">${data[2].addr1 }</div>
+                <div class="sale_cam_pr"><fmt:formatNumber value="${data[2].price}" pattern="#,###"/>~</div>
               </div>
             </a>
           </div>
@@ -202,11 +202,11 @@
           <!--특가상품 4-->
           <div class="saletext">
             <a href="#">
-              <img class="sale_img" src="resources/image/a4.jpg">
+              <img class="sale_img" src="${data[14].firstimageurl }">
               <div class="saledetail">
-                <div class="sale_cam_title">송어와 캠핑장</div>
-                <div class="sale_cam_ad">강원 평창군 용평면</div>
-                <div class="sale_cam_pr">55,000~</div>
+                <div class="sale_cam_title">${data[14].facltnm }</div>
+                <div class="sale_cam_ad">${data[14].addr1 }</div>
+                <div class="sale_cam_pr"><fmt:formatNumber value="${data[14].price}" pattern="#,###"/>~</div>
               </div>
             </a>
           </div>
@@ -214,11 +214,11 @@
           <!--특가상품 5-->
           <div class="saletext">
             <a href="#">
-              <img class="sale_img" src="resources/image/a5.jpg">
+              <img class="sale_img" src="${data[18].firstimageurl }">
               <div class="saledetail">
-                <div class="sale_cam_title">캠핑드림</div>
-                <div class="sale_cam_ad">충북 태안군 근흥면</div>
-                <div class="sale_cam_pr">55,000~</div>
+                <div class="sale_cam_title">${data[18].facltnm }</div>
+                <div class="sale_cam_ad">${data[18].addr1 }</div>
+                <div class="sale_cam_pr"><fmt:formatNumber value="${data[18].price}" pattern="#,###"/>~</div>
               </div>
             </a>
           </div>
@@ -243,20 +243,20 @@
         <div class="reco_content">
 
           <!--추천 캠핑장 링크 & 이미지-->
-          <a href="#"><img class="reco_img" src="resources/image/s3.jpg">
+          <a href="#"><img class="reco_img" src="${data[19].thirdimageurl }">
 
             <!--추천 캠핑장 설명-->
-            <p class="reco_title">럭셔리 글램핑 W 풀빌라</p>
-            <p class="reco_describe">산청으로 떠나는 하룻밤의 감성여행. 친절한 직원과 깨끗한 시설, 맛있는 음식, 즐거운 액티비티를 W 풀빌라에서 즐겨보세요!</p>
+            <p class="reco_title">${data[19].facltnm }</p>
+            <p class="reco_describe">${data[19].lineintro }</p>
             <div class="reco_hashtag">
               <div class="hashtag">#커플여행</div>
               <div class="hashtag">#럭셔리여행</div>
-              <div class="hashtag">#글램핑</div>
+              <div class="hashtag">#펜션</div>
               <div class="hashtag">#액티비티</div>
             </div>
             <!--추천 캠핑장 가격-->
             <div class="recommend_price">
-              <div class="reco_price">50,000원~</div>
+              <div class="reco_price"><fmt:formatNumber value="${data[18].price}" pattern="#,###"/>원~</div>
               <div class="reco_reservation">예약가능</div>
             </div>
             
