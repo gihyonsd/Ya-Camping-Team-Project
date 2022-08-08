@@ -16,8 +16,6 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.spring.yacamping.domain.BoardVO;
 import com.spring.yacamping.domain.BookingVO;
-import com.spring.yacamping.domain.Criteria;
-import com.spring.yacamping.service.BoardService;
 import com.spring.yacamping.service.BookingService;
 
 import lombok.AllArgsConstructor;

@@ -1,10 +1,13 @@
 package com.spring.yacamping.controller;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.spring.yacamping.domain.BoardVO;
 import com.spring.yacamping.domain.Criteria;
 import com.spring.yacamping.domain.PageDTO;
 import com.spring.yacamping.service.BoardService;
@@ -22,16 +25,13 @@ public class BoardController {
 	
 	@GetMapping("/list")
 	public String list(Criteria cri,Model model) {
-		
 		log.info("list : "+ cri);
 		Criteria setdate = new Criteria();
 		setdate.setStartDate(cri.getStartDate());
 		setdate.setEndDate(cri.getEndDate());
 		model.addAttribute("setdate", setdate);
 		model.addAttribute("list", service.getList(cri));
-		
 		int total = service.getTotal(cri);
-		
 		log.info("total : "+ total);
 		
 		model.addAttribute("pageMaker", new PageDTO(cri, total));

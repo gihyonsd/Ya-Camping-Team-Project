@@ -4,4 +4,6 @@ import com.spring.yacamping.domain.BookingVO;
 
 public interface BookingService {
 	public void booking(BookingVO booking);
+	
+	public void bookingkakao(BookingVO booking);
 }
