@@ -279,7 +279,6 @@ header {
   height: 500px;
 }
 
-
 #list>ul {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
@@ -310,14 +309,17 @@ header {
 
 .btn .submit {
   color: black;
+}
+
+.submit p {
+  font-size: 14px;
   text-align: center;
-  font-size: 15px;
+  line-height: 22px;
 }
 
 #list .camplist {
   background-color: white;
 }
-
 
 
 /*-----------------개인정보&예약내역 끝-----------------*/
