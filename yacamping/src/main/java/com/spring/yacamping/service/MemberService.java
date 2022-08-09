@@ -12,4 +12,5 @@ public interface MemberService {
 	public MemberVO readMember(String id);
 	
 	public void updateMember(MemberVO vo) throws Exception;
+
 }

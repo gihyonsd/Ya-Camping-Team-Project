@@ -28,10 +28,7 @@ public class BookingController {
 	private BookingService service;
 	@PostMapping("/booking")
 	public String booking(@RequestParam("totalprice")int price, @RequestParam(value = "audult_no")int audult_no, @RequestParam(value = "child_no")int child_no, HttpSession session, BoardVO board, BookingVO booking, RedirectAttributes rttr) throws ParseException {
-		Calendar cal = Calendar.getInstance();
-		int year = cal.get(Calendar.YEAR);
-		String ym = year + new DecimalFormat("00").format(cal.get(Calendar.MONTH));
-		String ymd = ym + new DecimalFormat("00").format(cal.get(Calendar.DATE));
+		String ym = "2022";
 		String sub = "";
 		for(int i = 1; i <= 6; i++) {
 			sub += (int)(Math.random() * 10);
@@ -40,7 +37,7 @@ public class BookingController {
 		Date format2 = new SimpleDateFormat("yyyy-MM-dd").parse(booking.getEndDate());
 		long diffSec = (format2.getTime() - format1.getTime()) / 1000; //초 차이
 		int diffDays = (int) (diffSec / (24*60*60)); //일자수 차이
-		String reservid = ymd + "-" + sub;
+		String reservid = ym + "-" +sub;
 		booking.setTotalprice(diffDays * price);
 		booking.setReservid(reservid);
 		String id = (String)session.getAttribute("id");

@@ -1,6 +1,5 @@
 package com.spring.yacamping.serviceImpl;
 
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -44,6 +43,7 @@ public class MemberServiceImpl implements MemberService{
 	public void updateMember(MemberVO vo) throws Exception {
 		memberDao.updateMember(vo);
 	}
+
 
 
 }

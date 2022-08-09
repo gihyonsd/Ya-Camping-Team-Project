@@ -83,7 +83,7 @@
       <!-----------------프로필 끝----------------->
 	
       <!-----------------개인정보 시작----------------->
-
+		
       <div class="profile_reservationlist">
         <div class="alltabMenu">
 
@@ -173,40 +173,30 @@
               <li>체크인</li>
               <li>체크아웃</li>
             </ul>
-
+			<c:forEach items="${list}" var="booking">
             <ul class="camplist">
-              <li>1</li>
-              <li>산넘고물건너</li>
-              <li>3명</li>
-              <li>1명</li>
-              <li>55,000</li>
-              <li>2022.07.26</li>
-              <li>2022.08.01</li>
-              <li>2022.08.03</li>
+              <li>${booking.reservid }</li>
+              <li>${booking.facltnm }</li>
+              <li>${booking.audult_no }명</li>
+              <li>${booking.child_no }명</li>
+              <li><fmt:formatNumber value="${booking.price}" pattern="#,###"/>원</li>
+              <li><fmt:formatDate value="${booking.reservday}" pattern="yyyy-MM-dd"/></li>
+              <li>${booking.checkin }</li>
+              <li>${booking.checkout }</li>
             </ul>
-
-            <ul class="camplist">
-              <li>2</li>
-              <li>캠핑매니아</li>
-              <li>2명</li>
-              <li>2명</li>
-              <li>75,000</li>
-              <li>2022.07.30</li>
-              <li>2022.08.05</li>
-              <li>2022.08.09</li>
+			</c:forEach>
+			<c:forEach items="${kakao}" var="kakaobooking">
+			<ul class="camplist">
+              <li>${kakaobooking.reservid }</li>
+              <li>${kakaobooking.facltnm }</li>
+              <li>${kakaobooking.audult_no }명</li>
+              <li>${kakaobooking.child_no }명</li>
+              <li><fmt:formatNumber value="${kakaobooking.price}" pattern="#,###"/>원</li>
+              <li><fmt:formatDate value="${kakaobooking.reservday}" pattern="yyyy-MM-dd"/></li>
+              <li>${kakaobooking.checkin }</li>
+              <li>${kakaobooking.checkout }</li>
             </ul>
-
-            <ul class="camplist">
-              <li>3</li>
-              <li>캠핑가든</li>
-              <li>1명</li>
-              <li>0명</li>
-              <li>45,000</li>
-              <li>2022.08.04</li>
-              <li>2022.09.01</li>
-              <li>2022.09.02</li>
-            </ul>
-
+			</c:forEach>
           </div>
         </div>
       </div>
