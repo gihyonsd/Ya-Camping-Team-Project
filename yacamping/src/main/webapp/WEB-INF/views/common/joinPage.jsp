@@ -21,7 +21,7 @@
       <div class="join">
         <!--헤더-->
         <div class="headermom">
-          <div class="header" onclick="location.href='main.html'">
+          <div class="header" onclick="location.href='/'">
             <img src="resources/image/logo-white.png">
             <p>야캠핑어때</p>
           </div>

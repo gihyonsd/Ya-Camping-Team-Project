@@ -17,7 +17,7 @@
     <div class="container">
       <!--로고&타이틀-->
       <div class="headermom">
-        <div class="header" onclick="location.href='home.jsp'">
+        <div class="header" onclick="location.href='/'">
           <img src="resources/image/logo-white.png">
           <p>야캠핑어때</p>
         </div>

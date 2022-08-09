@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-import com.spring.yacamping.domain.BoardVO;
 import com.spring.yacamping.domain.BookingVO;
 import com.spring.yacamping.mapper.BookingMapper;
 import com.spring.yacamping.service.BookingService;

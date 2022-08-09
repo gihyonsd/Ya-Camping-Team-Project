@@ -48,6 +48,7 @@ public class BookingController {
 		booking.setAudult_no(audult_no);
 		booking.setChild_no(child_no);
 		service.booking(booking);
+		service.bookingkakao(booking);
 		rttr.addFlashAttribute("result", booking.getCampnum());
 		return "/board/bookingConfirm";
 	}
