@@ -188,22 +188,24 @@ a {
   accent-color: #7DB249;
 }
 
-.nextbtn button{
-  width: 120px;
+.agree_go {
+  width: 40%;
   height: 30px;
-  border-radius: 0px;
-  border-style: none;
+  border: none;
   background-color: #E8E0A1;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: 30px;
+}
+
+.nextbtn button{
   margin: 0 auto;  
   display: block;
   position: relative;
   top: 30px;
 }
 
-.nextbtn button a {
-  color: black;
-}
-
-.nextbtn button:hover {
+.agree_go:hover {
   cursor: pointer;
 }
