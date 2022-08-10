@@ -2,6 +2,7 @@ package com.spring.yacamping.dao;
 
  
 
+
 import org.springframework.stereotype.Repository;
 
 import com.spring.yacamping.domain.MemberVO;

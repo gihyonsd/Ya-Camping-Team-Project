@@ -21,7 +21,7 @@
       <div class="join">
         <!--헤더-->
         <div class="headermom">
-          <div class="header" onclick="location.href='main.html'">
+          <div class="header" onclick="location.href='/'">
             <img src="resources/image/logo-white.png">
             <p>야캠핑어때</p>
           </div>
@@ -61,7 +61,7 @@
               </h3>
               <span class="input">
                 <input type="password" id="password2" name="password2" class="enter" maxlength="20"
-                  onchange="check_pw()">
+                  onchange="check_pw2()">
               </span>
               <span id="check"></span>
 

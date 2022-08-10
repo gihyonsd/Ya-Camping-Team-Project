@@ -11,9 +11,9 @@ import java.util.Date;
 import lombok.Data;
 
 @Data
-public class BookingVO {
+public class KakaoBookingVO {
 	private int campnum;
-	private int user_num;
+	private String user_num;
 	private String reservid;
 	private String id;
 	private String facltnm;

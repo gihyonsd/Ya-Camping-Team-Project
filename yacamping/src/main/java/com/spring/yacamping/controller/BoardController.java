@@ -1,13 +1,16 @@
 package com.spring.yacamping.controller;
 
-import java.util.List;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
-import com.spring.yacamping.domain.BoardVO;
+import com.spring.yacamping.domain.BookingVO;
 import com.spring.yacamping.domain.Criteria;
 import com.spring.yacamping.domain.PageDTO;
 import com.spring.yacamping.service.BoardService;
@@ -45,6 +48,18 @@ public class BoardController {
 		Criteria setdate = new Criteria();
 		setdate.setStartDate(cri.getStartDate());
 		setdate.setEndDate(cri.getEndDate());
+		model.addAttribute("setdate", setdate);
+		int total = service.getTotal(cri);
+		model.addAttribute("pageMaker", new PageDTO(cri, total));
+		model.addAttribute("board", service.get(cri));
+	}
+	@GetMapping("/getbooking")
+	public void getbooking(Criteria cri, Model model) {
+		Criteria setdate = new Criteria();
+		setdate.setStartDate(cri.getStartDate());
+		setdate.setEndDate(cri.getEndDate());
+		int total = service.getTotal(cri);
+		model.addAttribute("pageMaker", new PageDTO(cri, total));
 		model.addAttribute("setdate", setdate);
 		model.addAttribute("board", service.get(cri));
 	}
