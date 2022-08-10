@@ -2,18 +2,18 @@
 $(function () {
   $('#down').click(function (e) {
     e.preventDefault();
-    var stat = $('#number').text();
+    var stat = $('#number').val();
     var num = parseInt(stat, 10);
     num--;
     if (num <= 0) {
       alert('최소 1명 이상 예약하셔야 합니다.');
       num = 1;
     }
-    $('#number').text(num);
+    $('#number').val(num);
   });
   $('#up').click(function (e) {
     e.preventDefault();
-    var stat = $('#number').text();
+    var stat = $('#number').val();
     var num = parseInt(stat, 10);
     num++;
 
@@ -21,7 +21,7 @@ $(function () {
       alert('정원초과입니다.');
       num = 4;
     }
-    $('#number').text(num);
+    $('#number').val(num);
   });
 });
 
@@ -29,18 +29,18 @@ $(function () {
 $(function () {
   $('#down1').click(function (e) {
     e.preventDefault();
-    var stat = $('#number1').text();
+    var stat = $('#number1').val();
     var num = parseInt(stat, 10);
     num--;
     if (num <= 0) {
       alert('최소 1명 이상 예약하셔야 합니다.');
       num = 1;
     }
-    $('#number1').text(num);
+    $('#number1').val(num);
   });
   $('#up1').click(function (e) {
     e.preventDefault();
-    var stat = $('#number1').text();
+    var stat = $('#number1').val();
     var num = parseInt(stat, 10);
     num++;
 
@@ -48,7 +48,7 @@ $(function () {
       alert('정원초과입니다.');
       num = 4;
     }
-    $('#number1').text(num);
+    $('#number1').val(num);
   });
 });
 
