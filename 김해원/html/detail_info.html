@@ -8,6 +8,7 @@
   <title>야캠핑어때 캠핑장 상세정보</title>
   <link href="../css/detail_info.css" rel="stylesheet" />
   <!-- 제이쿼리 불러오기 -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard-polyfill/2.8.6/clipboard-polyfill.js"></script>
   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=38e9e837edc41683d3baac69998bd7ee"></script>
@@ -446,7 +447,12 @@
             <div class="modal hidden">
               <div class="bg"></div>
               <div class="modalBox">
-                <p>야캠핑어때 로그인 후 예약 가능합니다.</p>
+                <p>체크인 체크아웃 날짜를 선택해주세요.</p>
+
+                <div class="inputdate">
+                  <input type="text" placeholder="체크인" onfocus="(this.type='date')" class="checkdate"> ~ <input
+                    type="text" placeholder="체크아웃" onfocus="(this.type='date')" class="checkdate">
+                </div>
 
                 <div class="btn_log_close">
                   <button class="gotolog"><a href="#">로그인 하러가기</a></button>
@@ -460,9 +466,6 @@
 
       </footer>
       <!-----------------푸터 끝----------------->
-
-
-
 
     </div>
     <script src="../js/detail_info.js"></script>

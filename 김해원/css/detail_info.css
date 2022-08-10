@@ -580,6 +580,8 @@ button img {
   cursor: pointer;
 }
 
+/*-----------------푸터 끝-----------------*/
+
 /*-----------------예약하기 모달창 시작-----------------*/
 .openBtn {
   background-color: #F9B514;
@@ -612,7 +614,7 @@ button img {
   position: absolute;
   background-color: #fff;
   width: 950px;
-  height: 80px;
+  height: 130px;
   padding: 15px;
   bottom: 0;
   border-radius: 40px 40px 0 0;
@@ -622,7 +624,7 @@ button img {
   width: 500px;
   display: flex;
   position: relative;
-  top: 5px;
+  top: 30px;
 }
 
 .modalBox p {
@@ -644,10 +646,36 @@ button img {
   color: white;
 }
 
-
 .hidden {
   display: none;
 }
+
+.inputdate {
+  display: flex;
+  width: 40%;
+  position: relative;
+  top: 20px;
+}
+
+.inputdate input {
+  height: 25px;
+  width: 38%;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  background: #fff url('../image/calendar2.png') no-repeat right /contain;
+  background-size: 15px 15px;
+  background-position: 3.5cm 6px;
+  transform: translateY(-20%);
+  z-index: 0;
+}
+
+.checkdate {
+  font-size: 15px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+
 
 /*-----------------예약하기 모달창 끝-----------------*/
 

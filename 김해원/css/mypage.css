@@ -321,6 +321,9 @@ header {
   background-color: white;
 }
 
+.camplist li {
+	vertical-align: middle; 
+}
 
 /*-----------------개인정보&예약내역 끝-----------------*/
 
