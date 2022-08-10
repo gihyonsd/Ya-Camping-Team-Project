@@ -99,7 +99,7 @@
                             </div>
 
                             <p class="able">예약가능 수 : <span style="color: #767676;">해당업체 별도문의</span></p>
-                            <p class="price"><fmt:formatNumber value="${board.price}" pattern="#,###"/>~</p>
+                            <p class="price"><fmt:formatNumber value="${board.price}" pattern="#,###"/>원~</p>
                         </div>
                     </a>
                 </div>

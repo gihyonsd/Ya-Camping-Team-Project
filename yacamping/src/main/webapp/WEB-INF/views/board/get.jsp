@@ -47,7 +47,7 @@
               <li><a href="/Agree">회원가입</a></li>
               <% } else { %>
               <li><a href="/Logout">로그아웃</a></li>
-              <li><a href="#">마이페이지</a></li>
+              <li><a href="/Agree">마이페이지</a></li>
               <% } %>
             </ul>
             </li>
@@ -419,21 +419,57 @@
             <button class="openBtn">예약하기</button>
             <div class="modal hidden">
               <div class="bg"></div>
-              <div class="modalBox">
+              <c:choose>
+              <c:when test="${empty setdate.startDate || empty setdate.endDate}">
               <%if (id == null) { %>
+              <div class="modalBox1">
                 <p>야캠핑어때 로그인 후 예약 가능합니다.</p>
-                <div class="btn_log_close">
-                  <button class="gotolog"><a href="/Login">로그인 하러가기</a></button>
+                <div class="btn_log_close1">
+                  <a href="/Login"><button class="gotolog">로그인 하러가기</button></a>
                   <button class="closeBtn">닫기</button>
-                  <% } else { %>
-                  <p>예약을 하려는 캠핑장이 확실하신가요?</p>
-                  <div class="btn_log_close">
-                  <button class="gotobooking"><a href="/board/getbooking?campnum=${board.campnum}&&startDate=<fmt:formatDate value="${setdate.startDate}" pattern="yyyy-MM-dd"/>&&endDate=<fmt:formatDate value="${setdate.endDate}" pattern="yyyy-MM-dd"/>">예약 하러가기</a></button>
-                  <button class="closeBtn">닫기</button>
-                  <%} %>
-                  
-                </div>
+              	</div>
               </div>
+              <%} else { %>
+              <div class="modalBox">
+              <p>체크인 체크아웃 날짜를 선택해주세요.</p>
+              <form action="/board/getbooking" method="get">
+                <div class="inputdate">
+                  <input type="text" placeholder="체크인" onfocus="(this.type='date')" name="startDate" class="checkdate"> ~ <input
+                    type="text" placeholder="체크아웃" onfocus="(this.type='date')" name="endDate" class="checkdate">
+              	</div> 
+              <div class="btn_log_close">
+                 <input type="hidden" name="campnum" value="${board.campnum}">
+                 <input type="hidden" value="${pageMaker.cri.startDate }">
+                 <input type="hidden" value="${pageMaker.cri.endDate }">
+                 <button class="gotobooking">예약 하러가기</button>
+                 <button  type="button" class="closeBtn">닫기</button>
+              </div>
+              </form>
+              </div>
+              <% } %>
+              </c:when>
+              <c:otherwise>
+              <div class="modalBox1">
+              <%if (id == null) { %>
+              <p>야캠핑어때 로그인 후 예약 가능합니다.</p>
+              <div class="btn_log_close1">
+                  <a href="/Login"><button class="gotolog">로그인 하러가기</button></a>
+                  <button class="closeBtn">닫기</button>
+              </div>
+              <%} else { %>
+              <div class="modalBox1">
+              <p>예약하려는 캠핑장이 확실하신가요?</p>
+                  <div class="btn_log_close1">
+                  <a href="/board/getbooking?campnum=${board.campnum}&&startDate=<fmt:formatDate value="${setdate.startDate}" pattern="yyyy-MM-dd"/>&&endDate=<fmt:formatDate value="${setdate.endDate}" pattern="yyyy-MM-dd"/>"><button class="gotobooking">예약 하러가기</button></a>
+                  <button class="closeBtn">닫기</button>
+                  </div>
+              </div>
+              <% } %>
+              </div>
+              </c:otherwise>
+              </c:choose>
+
+  
             </div>
           </div>
 

@@ -67,33 +67,37 @@ function sample6_execDaumPostcode() {
    }).open();
 }
 
-//비밀번호 재확인
-function check_pw(){
+//비밀번호 조건 불일치 시 alert창
+function check_pw() {
     var pw = document.getElementById('password').value;
-    var SC = ["1","2","3","4","5","6","7","8","9","0"];
+    var SC = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
     var check_SC = 0;
 
-    if(pw.length < 6 || pw.length > 16){
+    if (pw.length < 6 || pw.length > 16) {
         window.alert('비밀번호는 6글자 이상, 16글자 이하만 이용 가능합니다.');
-        document.getElementById('password').value='';
+        document.getElementById('password').value = '';
     }
-    for(var i=0;i<SC.length;i++){
-        if(pw.indexOf(SC[i]) != -1){
+    for (var i = 0; i < SC.length; i++) {
+        if (pw.indexOf(SC[i]) != -1) {
             check_SC = 1;
         }
     }
-    if(check_SC == 0){
+    if (check_SC == 0) {
         window.alert('숫자를 포함하여 비밀번호를 작성하여 주세요.')
-        document.getElementById('password').value='';
+        document.getElementById('password').value = '';
     }
-    if(document.getElementById('password').value !='' && document.getElementById('password2').value!=''){
-        if(document.getElementById('password').value==document.getElementById('password2').value){
-            document.getElementById('check').innerHTML='비밀번호가 일치합니다.'
-            document.getElementById('check').style.color='blue';
+}
+
+//비밀번호 재확인 시 일치, 불일치 확인 문구
+function check_pw2() {
+    if (document.getElementById('password').value != '' && document.getElementById('password2').value != '') {
+        if (document.getElementById('password').value == document.getElementById('password2').value) {
+            document.getElementById('check').innerHTML = '비밀번호가 일치합니다.'
+            document.getElementById('check').style.color = 'blue';
         }
-        else{
-            document.getElementById('check').innerHTML='비밀번호가 일치하지 않습니다.';
-            document.getElementById('check').style.color='red';
+        else {
+            document.getElementById('check').innerHTML = '비밀번호가 일치하지 않습니다.';
+            document.getElementById('check').style.color = 'red';
         }
     }
-} 
+}

@@ -50,7 +50,8 @@ public class LoginController {
                        , @RequestParam("password") String password, HttpServletRequest request,HttpServletResponse response, boolean rememberId) throws Exception {
 
         String path = "";
-        
+        String referer = request.getHeader("Referer");
+        System.out.println(referer);
         MemberVO vo = new MemberVO();
         
 		if(rememberId(rememberId)) {

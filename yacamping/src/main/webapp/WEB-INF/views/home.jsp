@@ -177,7 +177,7 @@
 
           <!--특가상품 2-->
           <div class="saletext">
-            <a href="#">
+            <a href="/board/get?campnum=${data[1].campnum}">
               <img class="sale_img" src="${data[1].firstimageurl }">
               <div class="saledetail">
                 <div class="sale_cam_title">${data[1].facltnm }</div>

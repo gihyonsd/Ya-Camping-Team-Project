@@ -61,7 +61,7 @@
               </h3>
               <span class="input">
                 <input type="password" id="password2" name="password2" class="enter" maxlength="20"
-                  onchange="check_pw()">
+                  onchange="check_pw2()">
               </span>
               <span id="check"></span>
 

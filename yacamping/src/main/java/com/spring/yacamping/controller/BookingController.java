@@ -1,9 +1,6 @@
 package com.spring.yacamping.controller;
-
-import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 
 import javax.servlet.http.HttpSession;
@@ -38,16 +35,20 @@ public class BookingController {
 		long diffSec = (format2.getTime() - format1.getTime()) / 1000; //초 차이
 		int diffDays = (int) (diffSec / (24*60*60)); //일자수 차이
 		String reservid = ym + "-" +sub;
-		booking.setTotalprice(diffDays * price);
+		booking.setTotalprice(diffDays * price); //돈 계산
 		booking.setReservid(reservid);
 		String id = (String)session.getAttribute("id");
+		String nickname = (String)session.getAttribute("nickname");
 		booking.setId(id);
 		booking.setAudult_no(audult_no);
 		booking.setChild_no(child_no);
-		service.booking(booking);
-		service.bookingkakao(booking);
+		if(nickname == null) {
+			service.booking(booking);
+		} else {
+			service.bookingkakao(booking);
+		}
 		rttr.addFlashAttribute("result", booking.getCampnum());
-		return "/board/bookingConfirm";
+		return "/board/complete";
 	}
 }
 
