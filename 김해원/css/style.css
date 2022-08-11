@@ -324,6 +324,15 @@ header {
   position: relative;
 }
 
+select {
+  appearance:none;
+}
+
+select option {
+  background-color: white;
+  font-size: 13px;
+}
+
 
 /*-----------------체크인아웃 검색 끝-----------------*/
 
