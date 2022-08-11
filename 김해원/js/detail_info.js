@@ -71,6 +71,7 @@ var options = {
 
 var map = new kakao.maps.Map(container, options);
 
+
 /*예약하기 클릭시 모달창*/
 const open = () => {
   document.querySelector(".modal").classList.remove("hidden");
@@ -101,3 +102,4 @@ function sendLink() { // 카카오톡 공유하기
     },
   })
 }
+

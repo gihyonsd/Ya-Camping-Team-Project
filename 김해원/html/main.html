@@ -8,13 +8,15 @@
   <title>야캠핑어때</title>
   <link href="../css/style.css" rel="stylesheet" />
   <!-- 제이쿼리 불러오기 -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
   <!-- Slick 불러오기 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
- 
+
 
   <!--특가상품 슬라이드 스크립트-->
   <script>
@@ -51,14 +53,14 @@
           <!--로그인아이콘(유저아이콘)-->
           <ul class="login">
             <li>
-            <a href="/Login">
-              <img src="../image/user-logo.png" class="userlogo" alt="사용자로고">
-            </a>
-            <ul class="menu">
-              <li><a href="#">로그인</a></li>
+              <a href="/Login">
+                <img src="../image/user-logo.png" class="userlogo" alt="사용자로고">
+              </a>
+              <ul class="menu">
+                <li><a href="#">로그인</a></li>
                 <li><a href="#">마이페이지</a></li>
                 <li><a href="#">회원가입</a></li>
-            </ul>
+              </ul>
             </li>
           </ul>
         </div>
@@ -125,19 +127,60 @@
 
         <div class="search_box">
           <!--체크인/체크아웃-->
-          <input type="date" class="search_input">
-          <input type="date" class="search_input">
+          <div class="condition">
+            <input type="text" placeholder="체크인" onfocus="(this.type='date')" class="search_input1">
+          </div>
+          <div class="condition">
+            <input type="text" placeholder="체크아웃" onfocus="(this.type='date')" class="search_input2">
+          </div>
 
           <!--지역선택-->
-          <img src="../image/pin.png"><input type="text" class="search_input" placeholder="지역 선택">
+
+          <div class="condition">
+            <div id="result" contenteditable placeholder='지역선택' class="search_input3"></div>
+          </div>
 
           <!--카테고리 선택-->
-          <img src="../image/hashtag.png"><input type="text" class="search_input" placeholder="카테고리 선택">
+          <div class="condition">
+            <input type="text" placeholder="카테고리 선택" class="search_input4">
+          </div>
         </div>
 
         <!--검색버튼-->
         <button class="search_btn">검색</button>
       </div>
+
+      <!--지역 검색 모달창-->
+      <div class="region_modal" id="modal">
+        <div class="modal_content">
+          <p>지역을 선택하세요</p>
+          <input type="radio" value="강원도" onclick='getregion(event)' name="region" id="id1"><label for="id1">강원도</label>
+          <input type="radio" value="경기도" onclick='getregion(event)' name="region" id="id2"><label for="id2">경기도</label>
+          <input type="radio" value="경상남도" onclick='getregion(event)' name="region" id="id3"><label
+            for="id3">경상남도</label>
+          <input type="radio" value="경상북도" onclick='getregion(event)' name="region" id="id4"><label
+            for="id4">경상북도</label>
+          <input type="radio" value="대구시" onclick='getregion(event)' name="region" id="id5"><label for="id5">대구시</label>
+          <input type="radio" value="부산시" onclick='getregion(event)' name="region" id="id6"><label for="id6">부산시</label>
+          <input type="radio" value="서울시" onclick='getregion(event)' name="region" id="id7"><label for="id7">서울시</label>
+          <input type="radio" value="울산시" onclick='getregion(event)' name="region" id="id8"><label for="id8">울산시</label>
+          <input type="radio" value="인천시" onclick='getregion(event)' name="region" id="id9"><label for="id9">인천시</label>
+          <input type="radio" value="전라남도" onclick='getregion(event)' name="region" id="id10"><label
+            for="id10">전라남도</label>
+          <input type="radio" value="전라북도" onclick='getregion(event)' name="region" id="id11"><label
+            for="id11">전라북도</label>
+          <input type="radio" value="제주도" onclick='getregion(event)' name="region" id="id12"><label
+            for="id12">제주도</label>
+          <input type="radio" value="충청남도" onclick='getregion(event)' name="region" id="id13"><label
+            for="id13">충청남도</label>
+          <input type="radio" value="충청북도" onclick='getregion(event)' name="region" id="id14"><label
+            for="id14">충청북도</label>
+
+          <input type="button" id="modal_close_btn" value="선택완료"></button>
+        </div>
+        <div class="modal_layer" id="modal_layer"></div>
+      </div>
+
       <!-----------------날짜/지역/카테고리 검색 끝----------------->
 
       <!-----------------특가상품 시작----------------->
@@ -250,7 +293,7 @@
               <div class="reco_price">50,000원~</div>
               <div class="reco_reservation">예약가능</div>
             </div>
-            
+
           </a>
         </div>
 
@@ -316,8 +359,9 @@
 
     </div>
   </div>
+  <!--슬라이드 스크립트 연결-->
+  <script src="../js/script.js"></script>
 </body>
-<!--슬라이드 스크립트 연결-->
-<script src="../js/script.js"></script>
+
 
 </html>
