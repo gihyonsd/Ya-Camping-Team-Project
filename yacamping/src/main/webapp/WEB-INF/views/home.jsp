@@ -96,7 +96,7 @@
 
         <!--카테고리 중 캠핑-->
         <div class="category_menu">
-          <a href="/board/list?type=T&keyword=&type=C&category=일반야영장"><img src="resources/image/camping_icon.png">
+          <a href="/board/list?type=T&keyword=&type=C&category=캠핑장"><img src="resources/image/camping_icon.png">
             <p class="menu_name">캠핑</p>
 
           </a>

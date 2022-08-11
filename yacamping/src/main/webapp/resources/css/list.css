@@ -173,7 +173,7 @@ header {
 }
 
 .list {
-  height : 450px;
+  height: 2130px;
   margin-top: 63px;
   border: 1px solid transparent;
 }
@@ -186,74 +186,23 @@ header {
   height: 465px;
 }
 
-#list_image1 {
+#list_image {
   position: relative;
   width: 750px;
   height: 350px;
+  background-image: url('../image/a1.jpg'); /* 시작 이미지  */
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
   border-radius: 10px 10px 0 0;
 }
 
-#list_image1 img {
+#list_image img {
   width: 26px;
   height: 27px;
   margin-top: 310px;
   margin-left: 10px;
 }
-
-#list_image2 {
-  position: relative;
-  width: 750px;
-  height: 350px;
-  background-size: cover;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  border-radius: 10px 10px 0 0;
-}
-
-#list_image2 img {
-  width: 26px;
-  height: 27px;
-  margin-top: 310px;
-  margin-left: 10px;
-}
-
-#list_image3 {
-  position: relative;
-  width: 750px;
-  height: 350px;
-  background-size: cover;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  border-radius: 10px 10px 0 0;
-}
-
-#list_image3 img {
-  width: 26px;
-  height: 27px;
-  margin-top: 310px;
-  margin-left: 10px;
-}
-
-#list_image4 {
-  position: relative;
-  width: 750px;
-  height: 350px;
-  background-size: cover;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  border-radius: 10px 10px 0 0;
-}
-
-#list_image4 img {
-  width: 26px;
-  height: 27px;
-  margin-top: 310px;
-  margin-left: 10px;
-}
-
 
 .location {
   color: white;
@@ -315,7 +264,7 @@ header {
   left: 150px;
 }
 
-.leftbtn1 {
+.leftbtn {
   position: absolute;
   width: 25px;
   height: 25px;
@@ -323,52 +272,7 @@ header {
   margin-left: 10px;
 }
 
-.rightbtn1 {
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  margin-top: 170px;
-  margin-left: 715px;
-}
-.leftbtn2 {
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  margin-top: 170px;
-  margin-left: 10px;
-}
-
-.rightbtn2 {
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  margin-top: 170px;
-  margin-left: 715px;
-}
-.leftbtn3 {
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  margin-top: 170px;
-  margin-left: 10px;
-}
-
-.rightbtn3 {
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  margin-top: 170px;
-  margin-left: 715px;
-}
-.leftbtn4 {
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  margin-top: 170px;
-  margin-left: 10px;
-}
-
-.rightbtn4 {
+.rightbtn {
   position: absolute;
   width: 25px;
   height: 25px;
@@ -378,13 +282,27 @@ header {
 
 /*-----------------리스트 페이지 끝-----------------*/
 
+/*-----------------예약가능한 캠핑장 없습니다 시작-----------------*/
+
+.nolist {
+  height: 550px;
+}
+
+.nolist img {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  margin-top: 100px;
+}
+
+/*-----------------예약가능한 캠핑장 없습니다 끝-----------------*/
+
 /*-----------------페이징 시작-----------------*/
 
 .paging { 
   height: 70px;
   display: flex;
   width: 55%;
-  margin-top: 150px;
 }
 
 .page {
