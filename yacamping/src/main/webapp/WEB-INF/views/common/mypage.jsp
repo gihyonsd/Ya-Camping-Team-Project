@@ -4,7 +4,6 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-
 <% String id = (String)session.getAttribute("id"); %>
 
 
@@ -104,6 +103,19 @@
 	            <div class="nick">
 	              <p>닉네임</p><input id='modify_btn2' name="nickname" type='text' value="${sessionScope.nickname}" disabled />
 	            </div>
+	            <div class="birth">
+	              <p>생년월일</p><input class='empty' type='text' value="${sessionScope.birthday }" disabled />
+	            </div>
+	          	<c:if test="${sessionScope.gender eq 'male'}">
+	            <div class="gender">
+	              <p>성별</p><input class='empty' type='text' value="남" disabled />
+	            </div>
+	          	</c:if>
+	         	<c:if test="${sessionScope.gender eq 'female'}">
+	            <div class="gender">
+	              <p>성별</p><input class='empty' type='text' value="여" disabled />
+	            </div>
+	          	</c:if>
 		  	</c:when>
 		  	<c:otherwise>
 		  	<form action="/update" method="post" onsubmit="disablesubmit()">

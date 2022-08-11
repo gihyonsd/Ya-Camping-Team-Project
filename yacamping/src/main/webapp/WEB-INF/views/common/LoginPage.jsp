@@ -51,7 +51,7 @@
 					<div class="sns_login">
 						<div class="kakao_login">
 							<img src="resources/image/kakao.jpg"><input type="button"
-								onclick="location.href='https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=ede4ce6fbe5d5ff53dd7eb0f8fce2ccb&redirect_uri=http://localhost:8080/kakaoLogin'" value="카카오 로그인"
+								onclick="location.href='https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=9c6a35b4db0980b1f70abdbe87fc48a3&redirect_uri=http://localhost:8080/kakaoLogin'" value="카카오 로그인"
 								class="kakao">
 						</div>
 						<div class="naver_login">

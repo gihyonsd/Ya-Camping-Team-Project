@@ -33,7 +33,10 @@ public class LoginController {
     }
     
     @RequestMapping(value = "/Login", method = RequestMethod.GET)
-    public String LoginPage() {
+    public String LoginPage(HttpServletRequest request) {
+    	String referrer = request.getHeader("Referer");
+    	request.getSession().setAttribute("prevPage", referrer);
+
         return "/common/LoginPage";
     }
     @RequestMapping(value = "/register", method = RequestMethod.GET)
@@ -50,8 +53,8 @@ public class LoginController {
                        , @RequestParam("password") String password, HttpServletRequest request,HttpServletResponse response, boolean rememberId) throws Exception {
 
         String path = "";
-        String referer = request.getHeader("Referer");
-        System.out.println(referer);
+        
+       
         MemberVO vo = new MemberVO();
         
 		if(rememberId(rememberId)) {
@@ -70,9 +73,11 @@ public class LoginController {
         HttpSession session = request.getSession();
         session.setAttribute("id", id);
         session.setAttribute("password", password);
+       
 
         if(result == 1) {
-            path = "redirect:/";
+            path = (String)session.getAttribute("prevPage");
+            return "redirect:" + path;
         } else {
             path = "/common/LoginPage";
         }

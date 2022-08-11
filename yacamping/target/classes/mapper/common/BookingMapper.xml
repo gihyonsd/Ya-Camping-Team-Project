@@ -14,7 +14,7 @@
 	</insert>
 	
 	<select id="getBooking" resultType="com.spring.yacamping.domain.BookingVO">
-		SELECT * FROM booking WHERE id=#{id}
+		SELECT * FROM booking WHERE id=#{id} order by reservday
 	</select>
 	
 	<select id="getKakao" resultType="com.spring.yacamping.domain.BookingVO">

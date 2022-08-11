@@ -226,7 +226,9 @@
   </script>
             </c:forEach>
             <c:if test="${empty list}">
-			<div class="nolist">예약 가능한 캠핑장이 없습니다.</div>
+			<div class="nolist">
+              <img src="${path}/resources/image/nolist.png">
+            </div>
 			</c:if>
             
 
