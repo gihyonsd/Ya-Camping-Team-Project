@@ -296,22 +296,26 @@ header {
   /*이미지 가로 배치*/
 }
 
-.submit {
+.btn {
+  display: flex;
+}
+
+.submit, .exit {
   width: 140px;
   height: 25px;
   display: flex;
   margin-top: 50px;
 }
 
-.submit:hover {
+.submit:hover, .exit:hover {
   cursor: pointer;
 }
 
-.btn .submit {
+.btn .submit, .btn .exit {
   color: black;
 }
 
-.submit p {
+.submit p, .exit p {
   font-size: 14px;
   text-align: center;
   line-height: 22px;
