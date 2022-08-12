@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>야캠핑어때 비밀번호 찾기</title>
+  <link type="text/css" rel="stylesheet" href="../css/memberDeleteView.css">
+</head>
+
+<body>
+  <div class="memberexit">
+
+    <h2>회원 탈퇴</h2>
+
+    <form method="post" id="/delForm">
+
+      <div class="enter">
+        <label for="id">아이디</label>
+        <input type="text" id="id" name="id" value="${id}" readonly="readonly" />
+      </div>
+
+      <div class="enter">
+        <label for="password">패스워드</label>
+        <input type="password" id="password" name="password" />
+      </div>
+
+
+
+    </form>
+
+    <div class="btn">
+      <button id="submit" class="exitbtn">회원탈퇴</button>
+      <button type="button" class="canclebtn">탈퇴취소</button>
+    </div>
+
+    <img src="../image/exit.jpg">
+
+
+  </div>
+
+</body>
+
+</html>

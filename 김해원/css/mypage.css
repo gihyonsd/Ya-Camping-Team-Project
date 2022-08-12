@@ -321,6 +321,12 @@ header {
   line-height: 22px;
 }
 
+.exit a {
+  text-decoration: none;
+  color: black;
+}
+
+
 #list .camplist {
   background-color: white;
 }
