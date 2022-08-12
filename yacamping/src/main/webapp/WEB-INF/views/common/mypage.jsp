@@ -158,7 +158,7 @@
 	            <input class="empty" type='text' name="id" value="${member.id }" style="display:none"/>
 	
 	            <div class="btn">
-	              <button class="submit">수정한 내용 저장하기</button>
+	              <button class="submit"><p>수정한 내용 저장하기</p></button>
 	            </div>
 	            </form>
 		  	</c:otherwise>

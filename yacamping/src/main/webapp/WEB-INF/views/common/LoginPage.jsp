@@ -6,8 +6,12 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link type="text/css" rel="stylesheet" href="resources/css/login.css">
+<script>
+if('${msg}'!= '') {
+	alert('${msg}');
+}
+</script>
 </head>
-<body>
 <body>
 	<section id="loginFormArea">
 		<form action="/Login" method="post">
@@ -41,7 +45,6 @@
 					<p class="message">
 						아직 회원이 아니신가요? <a href="/Agree">회원가입</a>
 					</p>
-
 					<div class="submit">
 						<input type="submit" value="로그인">
 					</div>

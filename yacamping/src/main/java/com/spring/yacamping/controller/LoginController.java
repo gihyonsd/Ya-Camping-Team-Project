@@ -1,6 +1,9 @@
 package com.spring.yacamping.controller;
 
 
+
+import java.io.PrintWriter;
+
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -10,6 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -50,11 +54,10 @@ public class LoginController {
 	
     @RequestMapping(value = "/Login", method = RequestMethod.POST)
     public String Login(@RequestParam("id") String id
-                       , @RequestParam("password") String password, HttpServletRequest request,HttpServletResponse response, boolean rememberId) throws Exception {
+                       , @RequestParam("password") String password, HttpServletRequest request,HttpServletResponse response, boolean rememberId, Model model) throws Exception {
 
         String path = "";
-        
-       
+        String msg = "로그인 정보가 올바르지 않습니다.";
         MemberVO vo = new MemberVO();
         
 		if(rememberId(rememberId)) {
@@ -79,6 +82,7 @@ public class LoginController {
             path = (String)session.getAttribute("prevPage");
             return "redirect:" + path;
         } else {
+        	model.addAttribute("msg", msg);
             path = "/common/LoginPage";
         }
 
