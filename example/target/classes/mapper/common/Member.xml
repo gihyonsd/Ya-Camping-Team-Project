@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring.example.dao.MemberDao">
+	<!-- 로그인 -->
+	<select id="Login" parameterType="MemberVO" resultType="Int">
+		SELECT
+		COUNT(*)
+		FROM MEMBER
+		WHERE ID = #{id}
+		AND PASSWORD = #{password}
+	</select>
+	<!-- 회원 가입 -->
+	<insert id="register">
+		INSERT INTO MEMBER
+		VALUES(member_seq.nextval, #{id},
+		#{password}, #{name}, #{nickname}, #{phone}, #{birth},
+		#{email},
+		#{address}, #{gender})
+	</insert>
+	<!-- 아이디 중복 체크 -->
+	<select id="idChk" parameterType="MemberVO" resultType="Int">
+		SELECT
+		COUNT(*)
+		FROM MEMBER
+		WHERE ID = #{id}
+	</select>
+	<!-- 회원탈퇴 -->
+	<delete id="memberDelete">
+		DELETE FROM MEMBER
+		WHERE id = #{id}
+		AND password = #{password}
+	</delete>
+	<!-- 회원정보 수정 -->
+	<update id="memberUpdate">
+		UPDATE MEMBER SET 
+		password = #{password},
+		nickname = #{nickname}
+		WHERE id = #{id}
+	</update>
+</mapper>
