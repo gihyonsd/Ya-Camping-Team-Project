@@ -1,17 +1,19 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <html>
-	<head>
-	 	
-		<title>회원탈퇴</title>
-	</head>
-	<script src="resources/js/jquery-3.6.0.min.js"></script>
-	<script type="text/javascript">
+<head>
+
+<title>회원탈퇴</title>
+<link type="text/css" rel="stylesheet" href="resources/css/memberDeleteView.css">
+</head>
+<script src="resources/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
 		$(document).ready(function(){
 			// 취소
-			$(".cancle").on("click", function(){
-				location.href = "/mypage";   
+			$(".canclebtn").on("click", function(){
+				self.close();  
 			})
 		
 			$("#submit").on("click", function(){
@@ -44,19 +46,37 @@
 			
 		})
 	</script>
-	<body>
-			<form action="/memberDelete" method="post" id="delForm">
-				<div>
-					<label for="id">아이디</label>
-					<input type="text" id="id" name="id" value="${id}" readonly="readonly"/>
-				</div>
-				<div>
-					<label for="password">패스워드</label>
-					<input type="password" id="password" name="password" />
-				</div>
-			</form>
-			<button id="submit">회원탈퇴</button>
-			<button class="cancle" type="button">취소</button>
-	</body>
-	
+<body>
+  <div class="memberexit">
+
+    <h2>회원 탈퇴</h2>
+
+    <form action="/memberDelte" method="post" id="/delForm">
+
+      <div class="enter">
+        <label for="id">아이디</label>
+        <input type="text" id="id" name="id" value="${id}" readonly="readonly" />
+      </div>
+
+      <div class="enter">
+        <label for="password">패스워드</label>
+        <input type="password" id="password" name="password" />
+      </div>
+
+
+
+    </form>
+
+    <div class="btn">
+      <button id="submit" class="exitbtn">회원탈퇴</button>
+      <button type="button" class="canclebtn">탈퇴취소</button>
+    </div>
+
+    <img src="resources/image/exit.jpg">
+
+
+  </div>
+
+</body>
+
 </html>

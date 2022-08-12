@@ -146,7 +146,7 @@ public class LoginController {
 			model.addAttribute("check", 1);
 		} else {
 			model.addAttribute("check", 0);
-			model.addAttribute("updateid", member.getId());
+			model.addAttribute("password", member.getPassword());
 		}
 		return "/common/findpassword";
 		

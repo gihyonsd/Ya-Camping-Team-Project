@@ -8,19 +8,20 @@
 <title>Find ID</title>
 </head>
 <body>
-<form method="post" action="/findid">
+<form method="post" class="form-signin" action="/findid" name="findform">
 		<div class="form-label-group">
-			<input type="text" id="name" name="name">
+			<input type="text" id="name" name="name" class="form-control"/>
 			<label for="name">name</label>
 		</div>
 		
-		<div>
-			<input type="text" id="phone" name="phone">
+		<div class="form-label-group">
+			<input type="text" id="phone" name="phone" class="form-control"/>
 			<label for="phone">phone</label>
 		</div>
 
-		<div>
-			<input type="submit" value="check">
+		<div class="form-label-group">
+			<input class="btn btn-lg btn-secondary btn-block text-uppercase"
+				type="submit" value="check">
 		</div>
 
 		<!-- 이름과 전화번호가 일치하지 않을 때-->
@@ -34,16 +35,18 @@
 
 		<!-- 이름과 비밀번호가 일치하지 않을 때 -->
 		<c:if test="${check == 0 }">
-		<label>찾으시는 아이디는'${id}' 입니다.</label>
-		<div>
-				<input type="button" value="OK" onclick="closethewindow()">
-		</div>
+		<label>찾으시는 아이디는' ${id}' 입니다.</label>
+		<div class="form-label-group">
+				<input class="btn btn-lg btn-secondary btn-block text-uppercase"
+					type="button" value="OK" onclick="closethewindow()">
+			</div>
 		</c:if>
+
 	</form>
 	
 	<script type="text/javascript">
 		function closethewindow(){
-			self.close();
+			window.close();
 		}
 	</script>
 </body>

@@ -37,11 +37,10 @@
 			</script>
 			<label>일치하는 정보가 존재하지 않습니다.</label>
 		</c:if>
-
-		<!-- 이름과 비밀번호가 일치하지 않을 때 -->
+		
 		<c:if test="${check == 0 }">
 			<div>
-			<label>찾으시는 비밀번호는' ${password}' 입니다.</label>
+			<label>찾으시는 비밀번호는 '${password}' 입니다.</label>
 				<input type="button" value="OK" onclick="closethewindow()">
 			</div>
 		</c:if>

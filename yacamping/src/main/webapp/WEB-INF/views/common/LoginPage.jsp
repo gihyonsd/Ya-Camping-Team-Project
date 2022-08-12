@@ -37,7 +37,7 @@ if('${msg}'!= '') {
 						</div>
 
 						<div class="forgot_id_pw">
-							<a href="/findid" onclick="window.open(this.href, '_blank', 'width=400, height=400'); return false;">아이디 찾기 </a>/<a href="/findpassword" onclick="window.open(this.href, '_blank', 'width=400, height=400'); return false;"> 비밀번호 찾기</a>
+							<a href="/findid" onclick="window.open(this.href, '_blank', 'width=400px, height=500px'); return false;">아이디 찾기 </a>/<a href="/findpassword" onclick="window.open(this.href, '_blank', 'width=400px, height=530px'); return false;"> 비밀번호 찾기</a>
 						</div>
 					</div>
 					<p class="message">
