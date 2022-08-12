@@ -29,13 +29,13 @@
 	<delete id="memberDelete">
 		DELETE FROM MEMBER
 		WHERE id = #{id}
-		AND password = #{password}
+		AND password =
+		#{password}
 	</delete>
-	<!-- 회원정보 수정 -->
-	<update id="memberUpdate">
-		UPDATE MEMBER SET 
-		password = #{password},
-		nickname = #{nickname}
+	<!-- 회원탈퇴 패스워드 체크 -->
+	<select id="passChk" resultType="int">
+		SELECT COUNT(*) FROM MEMBER
 		WHERE id = #{id}
-	</update>
+		AND password = #{password}
+	</select>
 </mapper>

@@ -1,53 +1,23 @@
 package com.spring.example.serviceImpl;
 
-import java.util.List;
+import javax.inject.Inject;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-import com.spring.example.domain.BoardVO;
-import com.spring.example.domain.Criteria;
-import com.spring.example.mapper.BoardMapper;
+import com.spring.example.dao.BoardDAO;
 import com.spring.example.service.BoardService;
+import com.spring.example.VO.BoardVO;
 
-import lombok.AllArgsConstructor;
-import lombok.Setter;
-import lombok.extern.log4j.Log4j;
-
-@Primary
 @Service
+public class BoardServiceImpl implements BoardService {
 
-@AllArgsConstructor
-@Log4j
-public class BoardServiceImpl implements BoardService{
-
-	@Setter(onMethod_ = @Autowired)
-	private BoardMapper mapper;
-
-
-	@Override
-	public BoardVO get(int bno) {
-		
-		
-		return mapper.read(bno);
-	}
+	@Inject
+	private BoardDAO dao;
 	
+	// 게시글 작성
 	@Override
-	public List<BoardVO> getList(Criteria cri) {
-		
-		log.info("get List witg criteria: "+ cri);
-		
-		return mapper.getListWithPaging(cri);
-	}
-	
-	@Override
-	public int getTotal(Criteria cri) {
-		
-		log.info("get Total Count");
-		
-		return mapper.gettotalCount(cri);
-		
+	public void write(BoardVO boardVO) throws Exception {
+		dao.write(boardVO);
 	}
 
 }

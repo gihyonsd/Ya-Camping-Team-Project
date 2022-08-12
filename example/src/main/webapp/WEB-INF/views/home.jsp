@@ -32,12 +32,6 @@
         dots: true
       });
     });
-	$(document).ready(function(){
-		$("#memberUpdateBtn").on("click", function(){
-			location.href="common/memberUpdateView";
-		})
-		
-	})
   </script>
 </head>
 
@@ -52,7 +46,7 @@
         <%if(id == null) { %>
         <a href="/Login"><input type="button" class="btn" value="login"></a>
         <%} else {%>
-        <button id="memberUpdateBtn" type="button">회원정보수정</button>
+        <a href="/memberDelete"><input type="button" class="btn" value="memberDelete"></a>
         <a href="/Logout"><input type="button" class="btn" value="logout"></a>
         <% } %>
       </div>

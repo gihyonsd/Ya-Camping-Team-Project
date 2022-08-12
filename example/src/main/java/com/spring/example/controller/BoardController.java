@@ -1,48 +1,40 @@
 package com.spring.example.controller;
 
 
+import javax.inject.Inject;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.spring.example.domain.Criteria;
-import com.spring.example.domain.PageDTO;
 import com.spring.example.service.BoardService;
-
-import lombok.AllArgsConstructor;
-import lombok.extern.log4j.Log4j;
+import com.spring.example.VO.BoardVO;
 
 @Controller
-@Log4j
-@RequestMapping("/board/*")
-@AllArgsConstructor
 public class BoardController {
-	
-	private BoardService service;
 
-	@GetMapping("/list")
-	public String list(Criteria cri,Model model) {
-		
-		log.info("list : "+ cri);
-		model.addAttribute("list", service.getList(cri));
-		
-		int total = service.getTotal(cri);
-		
-		log.info("total : "+ total);
-		
-		model.addAttribute("pageMaker", new PageDTO(cri, total));
-		return "/board/list";
-		
+	private static final Logger logger = LoggerFactory.getLogger(BoardController.class);
 	
-	}
-	@GetMapping("/get")
-	public void get(@RequestParam("bno") int bno, Model model) {
-		log.info("/get");
-		model.addAttribute("board", service.get(bno));
+	@Inject
+	BoardService service;
+	
+	// 게시판 글 작성 화면
+	@RequestMapping(value = "/common/writeView", method = RequestMethod.GET)
+	public void writeView() throws Exception{
+		logger.info("writeView");
+		
 	}
 	
+	// 게시판 글 작성
+	@RequestMapping(value = "/common/write", method = RequestMethod.POST)
+	public String write(BoardVO boardVO) throws Exception{
+		logger.info("write");
+		
+		service.write(boardVO);
+		
+		return "redirect:/";
+	}
 	
 }
-

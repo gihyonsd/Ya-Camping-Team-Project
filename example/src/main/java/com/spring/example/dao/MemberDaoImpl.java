@@ -27,16 +27,17 @@ public class MemberDaoImpl implements MemberDao {
 		int result = sql.selectOne(Namespace + ".idChk", vo);
 		return result;
 	}
+	// 회원 탈퇴
 	@Override
 	public void memberDelete(MemberVO vo) throws Exception {
 		sql.delete(Namespace + ".memberDelete", vo);
 		
 	}
+	// 회원 탈퇴 패스워드 체크
 	@Override
-	public void memberUpdate(MemberVO vo) throws Exception {
-		// vo에 담긴 파라미터들은 memberMapper.xml에 memberMapper라는 namespace에 
-		// 아이디가 memberUpdate인 쿼리에 파라미터들을 넣어줍니다.
-		sql.update(Namespace + ".memberUpdate", vo); 
+	public int passChk(MemberVO vo) throws Exception {
+		int result = sql.selectOne(Namespace + ".passChk", vo);
+		return result;
 	}
 
 }

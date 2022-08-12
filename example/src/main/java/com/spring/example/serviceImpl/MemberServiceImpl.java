@@ -32,18 +32,17 @@ public class MemberServiceImpl implements MemberService {
 		return result;
 	}
 
+	//회원탈퇴
 	@Override
 	public void memberDelete(MemberVO vo) throws Exception {
 		memberDao.memberDelete(vo);
 	}
 	
-	//Controller에서 보내는 파라미터들을 memberUpdate(MemberVO vo)로 받고
+	//회원 탈퇴 패스워드 체크
 	@Override
-	public void memberUpdate(MemberVO vo) throws Exception {
-		
-		//받은 vo를 DAO로 보내줍니다.
-		memberDao.memberUpdate(vo);
-		
+	public int passChk(MemberVO vo) throws Exception {
+		int result = memberDao.passChk(vo);
+		return result;
 	}
 
 }

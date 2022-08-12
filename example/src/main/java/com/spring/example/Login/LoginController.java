@@ -47,7 +47,7 @@ public class LoginController {
 			HttpServletRequest request, HttpServletResponse response, boolean rememberId) throws Exception {
 
 		String path = "";
-
+		
 		MemberVO vo = new MemberVO();
 
 		if (rememberId(rememberId)) {
@@ -115,44 +115,34 @@ public class LoginController {
 	}
 
 	// 회원 탈퇴 get
-	@RequestMapping(value = "/memberDeleteView", method = RequestMethod.GET)
+	@RequestMapping(value = "/memberDelete", method = RequestMethod.GET)
 	public String memberDeleteView() throws Exception {
-		return "/memberDeleteView";
+		return "/common/memberDeleteView";
 	}
 
 	// 회원 탈퇴 post
+
 	@RequestMapping(value = "/memberDelete", method = RequestMethod.POST)
 	public String memberDelete(MemberVO vo, HttpSession session, RedirectAttributes rttr) throws Exception {
-
-		// 세션에 있는 member를 가져와 member변수에 넣어줍니다.
-		MemberVO member = (MemberVO) session.getAttribute("member");
-		// 세션에있는 비밀번호
-		String sessionPass = member.getPassword();
-		// vo로 들어오는 비밀번호
+		String sePass = (String)session.getAttribute("password");
 		String voPass = vo.getPassword();
-
-		if (!(sessionPass.equals(voPass))) {
+		if(!(sePass.equals(voPass))) {
 			rttr.addFlashAttribute("msg", false);
-			return "redirect:/memberDeleteView";
+			return "/common/memberDeleteView";
 		}
+		
 		memberServiceImpl.memberDelete(vo);
 		session.invalidate();
 		return "redirect:/";
 	}
 	
-	@RequestMapping(value="/memberUpdate", method = RequestMethod.GET)
-	public String registerUpdateView() throws Exception{
-		
-		return "/memberUpdateView";
+	// 회원 탈퇴 패스워드 체크
+	@ResponseBody
+	@RequestMapping(value="/passChk", method = RequestMethod.POST)
+	public int passChk(MemberVO vo) throws Exception {
+		int result = memberServiceImpl.passChk(vo);
+		return result;
 	}
+	
 
-	@RequestMapping(value="/memberUpdate", method = RequestMethod.POST)
-	public String registerUpdate(MemberVO vo, HttpSession session) throws Exception{
-		
-		memberServiceImpl.memberUpdate(vo);
-		
-		session.invalidate();
-		
-		return "redirect:/";
-	}
 }

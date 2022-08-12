@@ -21,7 +21,26 @@
 					alert("비밀번호를 입력해주세요.");
 					$("#password").focus();
 					return false;
-				}	
+				}
+				$.ajax({
+					url : "/passChk",
+					type : "POST",
+					dataType : "json",
+					data : $("#delForm").serializeArray(),
+					success: function(data){
+						
+						if(data==0){
+							alert("패스워드가 틀렸습니다.");
+							return;
+						}else{
+							if(confirm("회원탈퇴하시겠습니까?")){
+								$("#delForm").submit();
+							}
+							
+						}
+					}
+				})
+				
 			});
 			
 				
@@ -30,10 +49,10 @@
 	</script>
 	<body>
 		<section id="container">
-			<form action="/memberDelete" method="post">
+			<form action="/memberDelete" method="post" id="delForm">
 				<div class="form-group has-feedback">
-					<label class="control-label" for="userId">아이디</label>
-					<input class="form-control" type="text" id="userId" name="userId" value="${MEMBER.id}" readonly="readonly"/>
+					<label class="control-label" for="id">아이디</label>
+					<input class="form-control" type="text" id="id" name="id" value="${id}" readonly="readonly"/>
 				</div>
 				<div class="form-group has-feedback">
 					<label class="control-label" for="password">패스워드</label>
