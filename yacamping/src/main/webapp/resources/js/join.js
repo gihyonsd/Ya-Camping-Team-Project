@@ -17,6 +17,56 @@ function selectEmail(ele){
     }
 }
 
+// 유효성 검사
+function do_submit() {
+	 let id = document.getElementById("id");
+	 let password = document.getElementById("password");
+	 let name = document.getElementById("name");
+	 let nickname = document.getElementById("nickname");
+	 let birth = document.getElementById("birth");
+	 let r1 = document.getElementById("r1");
+	 let r2 = document.getElementById("r2");
+	 let r3 = document.getElementById("r3");
+	 let phone = document.getElementById("phone");
+	 let email1 = document.getElementById("email1");
+	 let email2 = document.getElementById("email2");
+	 if(id.value.length == 0) {
+		 alert('아이디를 입력하세요');
+		 return false;
+	 }
+	 if(password.value.length == 0) {
+		 alert('비밀번호를 입력하세요');
+		 return false;
+	 }
+	 if(name.value.length == 0) {
+		 alert('이름을 입력하세요');
+		 return false;
+	 }
+	 if(nickname.value.length == 0) {
+		 alert('닉네임을 입력하세요');
+		 return false;
+	 }
+	 if(birth.value.length == 0) {
+		 alert('생년월일을 선택하세요');
+		 return false;
+	 }
+	 if(!r1.checked && !r2.checked && !r3.checked) {
+		 alert('성별을 선택하세요');
+		 return false;
+	 }
+	 if(phone.value.length == 0) {
+		 alert('전화번호를 입력하세요');
+		 return false;
+	 }
+	 if(email1.value.length == 0) {
+		 alert('이메일을 입력하세요');
+		 return false;
+	 }
+	 if(email2.value.length == 0) {
+		 alert('도메인을 입력하거나 선택하세요');
+		 return false;
+	 }
+}
 
 //주소찾기 및 입력
 function sample6_execDaumPostcode() {

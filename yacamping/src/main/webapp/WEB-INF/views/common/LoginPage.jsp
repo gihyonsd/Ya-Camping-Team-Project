@@ -37,11 +37,9 @@ if('${msg}'!= '') {
 						</div>
 
 						<div class="forgot_id_pw">
-							<a href="">아이디/비밀번호 찾기</a>
+							<a href="/findid" onclick="window.open(this.href, '_blank', 'width=400, height=400'); return false;">아이디 찾기 </a>/<a href="/findpassword" onclick="window.open(this.href, '_blank', 'width=400, height=400'); return false;"> 비밀번호 찾기</a>
 						</div>
-
 					</div>
-
 					<p class="message">
 						아직 회원이 아니신가요? <a href="/Agree">회원가입</a>
 					</p>

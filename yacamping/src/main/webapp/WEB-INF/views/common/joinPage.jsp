@@ -11,12 +11,30 @@
   <script src="resources/js/join.js"></script>
   <script src="resources/js/jquery-3.6.0.min.js"></script>
   <script src="http://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+  <script>
+  function fn_idChk(){
+		$.ajax({
+			url : "/idChk",
+			type : "post",
+			dataType : "json",
+			data : {"id" : $("#id").val()},
+			success : function(data){
+				if(data == 1){
+					alert("중복된 아이디입니다.");
+				}else if(data == 0){
+					$("#idChk").attr("value", "Y");
+					alert("사용가능한 아이디입니다.");
+				}
+			}
+		})
+	} 
+  </script>
 </head>
 
 <body>
 
   <div class="wrap">
-    <form name="joinForm" action="/register" method="POST">
+    <form name="joinForm" action="/register" method="POST" onsubmit="return do_submit();">
       <!--회원가입 박스 테두리-->
       <div class="join">
         <!--헤더-->
@@ -38,8 +56,9 @@
               <h3 class="join_title">
                 <label for="id">아이디</label>
               </h3>
-              <span class="input">
-                <input type="text" id="id" name="id" class="enter" maxlength="20">
+              <span class="inputid">
+                <input type="text" id="id" name="id" class="enter" maxlength="15" placeholder="15자 이하로 입력하세요.">
+                <button class="doubleid" type="button" id="idChk" onclick="fn_idChk();" value="N">중복체크</button>
               </span>
             </div>
 
@@ -156,7 +175,7 @@
               </h3>
               <div class="input_email">
               <input type="hidden" name="email">
-                <input name="email1" type="text" class="enter"> @ <input name="email2" type="text" class="enter1">
+                <input name="email1" type="text" id="email1" class="enter"> @ <input name="email2" type="text" id="email2" class="enter1">
                 <select name="select_email" onChange="selectEmail(this)">
                   <option value="" selected>선택하세요</option>
                   <option value="1">직접입력</option>

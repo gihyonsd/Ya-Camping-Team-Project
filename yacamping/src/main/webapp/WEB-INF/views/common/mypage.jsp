@@ -159,6 +159,7 @@
 	
 	            <div class="btn">
 	              <button class="submit"><p>수정한 내용 저장하기</p></button>
+	     	      <a href="/memberDelete"><button type="button" class="exit"><p>회원탈퇴하기</p></button></a>
 	            </div>
 	            </form>
 		  	</c:otherwise>
