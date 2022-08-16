@@ -6,8 +6,12 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link type="text/css" rel="stylesheet" href="resources/css/login.css">
+<script>
+if('${msg}'!= '') {
+	alert('${msg}');
+}
+</script>
 </head>
-<body>
 <body>
 	<section id="loginFormArea">
 		<form action="/Login" method="post">
@@ -33,15 +37,12 @@
 						</div>
 
 						<div class="forgot_id_pw">
-							<a href="">아이디/비밀번호 찾기</a>
+							<a href="/findid" onclick="window.open(this.href, '_blank', 'width=415px, height=440px'); return false;">아이디 찾기 </a>/<a href="/findpassword" onclick="window.open(this.href, '_blank', 'width=415px, height=465px'); return false;"> 비밀번호 찾기</a>
 						</div>
-
 					</div>
-
 					<p class="message">
 						아직 회원이 아니신가요? <a href="/Agree">회원가입</a>
 					</p>
-
 					<div class="submit">
 						<input type="submit" value="로그인">
 					</div>

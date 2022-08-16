@@ -158,7 +158,8 @@
 	            <input class="empty" type='text' name="id" value="${member.id }" style="display:none"/>
 	
 	            <div class="btn">
-	              <button class="submit">수정한 내용 저장하기</button>
+	              <button class="submit"><p>수정한 내용 저장하기</p></button>
+	     	      <a href="/memberDelete" onclick="window.open(this.href, '_blank', 'width=400px, height=500px'); return false;"><button type="button" class="exit"><p>회원탈퇴하기</p></button></a>
 	            </div>
 	            </form>
 		  	</c:otherwise>

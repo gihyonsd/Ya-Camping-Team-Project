@@ -19,7 +19,7 @@
   <!-- 제이쿼리 불러오기 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard-polyfill/2.8.6/clipboard-polyfill.js"></script>
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c34b277686c67e06eb17fc958097c2d6"></script>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0f2b287d5c416736a802c07ae457f6e0"></script>
   <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 </head>
 
@@ -117,7 +117,7 @@
               <p>주소 복사</p>
             </button>
           </div>
-          <div class="price"> <fmt:formatNumber value="${board.price}" pattern="#,###"/> ~</div>
+          <div class="price"> <fmt:formatNumber value="${board.price}" pattern="#,###"/>원~</div>
         </div>
 
         <div class="visit">

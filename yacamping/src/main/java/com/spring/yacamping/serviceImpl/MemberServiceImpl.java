@@ -44,6 +44,34 @@ public class MemberServiceImpl implements MemberService{
 		memberDao.updateMember(vo);
 	}
 
+	// 아이디 중복 체크
+	@Override
+	public int idChk(MemberVO vo) throws Exception {
+		int result = memberDao.idChk(vo);
+		return result;
+	}
+
+	@Override
+	public MemberVO findid(MemberVO vo) throws Exception {
+		return memberDao.findid(vo);
+	}
+
+	@Override
+	public MemberVO findpassword(MemberVO vo) throws Exception {
+		return memberDao.findpassword(vo);
+	}
+
+	@Override
+	public void memberDelete(MemberVO vo) throws Exception {
+		memberDao.memberDelete(vo);
+	}
+	
+	//회원 탈퇴 패스워드 체크
+	@Override
+	public int passChk(MemberVO vo) throws Exception {
+		int result = memberDao.passChk(vo);
+		return result;
+	}
 
 
 }
