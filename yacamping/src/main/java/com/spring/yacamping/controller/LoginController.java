@@ -116,7 +116,7 @@ public class LoginController {
     	    PrintWriter out = response.getWriter();
     	    out.println("<script>alert('회원가입이 완료되었습니다!'); location.href='/'; </script>");
     	    out.flush(); 
-    	    return "redirect:/";
+    	    return null;
     }
     
 	// 아이디 중복 체크
