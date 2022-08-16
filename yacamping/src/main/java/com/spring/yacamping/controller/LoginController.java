@@ -109,14 +109,13 @@ public class LoginController {
     }
     
     @RequestMapping(value = "/register") 
-    	public String register(@RequestParam("nation") String nation, @RequestParam("phone") String phone, @ModelAttribute MemberVO vo, HttpServletResponse response) throws Exception {
+    	public void register(@RequestParam("nation") String nation, @RequestParam("phone") String phone, @ModelAttribute MemberVO vo, HttpServletResponse response) throws Exception {
     		vo.setPhone(nation + " " + phone);
     		memberServiceImpl.register(vo);
     	    response.setContentType("text/html; charset=UTF-8");
     	    PrintWriter out = response.getWriter();
     	    out.println("<script>alert('회원가입이 완료되었습니다!'); location.href='/'; </script>");
     	    out.flush(); 
-    	    return null;
     }
     
 	// 아이디 중복 체크
