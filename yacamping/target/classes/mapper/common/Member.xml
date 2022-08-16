@@ -32,11 +32,11 @@
 	</select>
 	<!-- 아이디 찾기 -->
 	<select id="findid" resultType="com.spring.yacamping.domain.MemberVO">
-		select * from member where name=#{name} and phone=#{phone}
+		select * from member where name=#{name} and email=#{email}
 	</select>
 	<!-- 비밀번호 찾기 -->
 	<select id="findpassword" resultType="com.spring.yacamping.domain.MemberVO">
-		select * from member where id=#{id} and name=#{name} and phone=#{phone}
+		select * from member where id=#{id} and name=#{name} and email=#{email}
 	</select>
 	<!-- 회원탈퇴 -->
 	<delete id="memberDelete">

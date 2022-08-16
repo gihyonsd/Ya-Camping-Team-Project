@@ -53,7 +53,7 @@
           <p class="division">아 동</p>
           <div class="count">
             <button id="down1">-</button>
-            <input type="text" id="number1" name="child_no" value="1">
+            <input type="text" id="number1" name="child_no" value="0">
             <button id="up1">+</button>
           </div>
         </div>
@@ -141,8 +141,8 @@
 				form.submit();
 				alert(msg);
 			} else {
-				var msg = '결제에 실패하였습니다.';
-				msg += '에러내용 : ' + rsp.error_msg;
+				var msg = '결제에 실패하였습니다.' + "\n";
+				msg += '이유 : ' + rsp.error_msg;
 				alert(msg);
 				location.href = document.referrer;
 			}

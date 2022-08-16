@@ -35,6 +35,8 @@
 						}else{
 							if(confirm("회원탈퇴하시겠습니까?")){
 								$("#delForm").submit();
+								window.close();
+								window.opener.location.href = "/";
 							}
 						}
 					}
@@ -51,11 +53,11 @@
 
     <h2>회원 탈퇴</h2>
 
-    <form action="/memberDelte" method="post" id="/delForm">
+    <form action="/memberDelete" method="post" id="delForm">
 
       <div class="enter">
         <label for="id">아이디</label>
-        <input type="text" id="id" name="id" value="${id}" readonly="readonly" />
+        <input type="text" id="id" name="id" value="${id}" readonly />
       </div>
 
       <div class="enter">
