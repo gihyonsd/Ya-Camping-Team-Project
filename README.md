@@ -26,7 +26,7 @@
 - Spring Legacy Project
 - Spring MVC
 - Mybatis 3.4.6
-- JAVA 1.8
+- JDK 1.8
 
 #### DB
 - Oracle
@@ -38,5 +38,6 @@
 - 결제(결제 기능)
 
 ## 👀 배포
-- 오라클 클라우드
+- 오라클 클라우드 인스턴스
+- 리눅스 환경
 - http://yacamping.xyz/
