@@ -52,7 +52,7 @@ if('${msg}'!= '') {
 					<div class="sns_login">
 						<div class="kakao_login">
 							<img src="resources/image/kakao.jpg"><input type="button"
-								onclick="location.href='https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=9c6a35b4db0980b1f70abdbe87fc48a3&redirect_uri=http://localhost:8080/kakaoLogin'" value="카카오 로그인"
+								onclick="location.href='https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=0f2b287d5c416736a802c07ae457f6e0&redirect_uri=http://yacamping.xyz/kakaoLogin'" value="카카오 로그인"
 								class="kakao">
 						</div>
 						<div class="naver_login">

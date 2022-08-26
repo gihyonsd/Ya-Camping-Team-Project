@@ -47,8 +47,8 @@ public class kakaoService {
 				BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(conn.getOutputStream()));
 				StringBuilder sb = new StringBuilder();
 				sb.append("grant_type=authorization_code");
-				sb.append("&client_id=9c6a35b4db0980b1f70abdbe87fc48a3");
-				sb.append("&redirect_uri=http://localhost:8080/kakaoLogin");
+				sb.append("&client_id=0f2b287d5c416736a802c07ae457f6e0");
+				sb.append("&redirect_uri=http://yacamping.xyz/kakaoLogin");
 				sb.append("&code=" + authorize_code);
 				bw.write(sb.toString());
 				bw.flush();

@@ -35,8 +35,6 @@
 						}else{
 							if(confirm("회원탈퇴하시겠습니까?")){
 								$("#delForm").submit();
-								window.close();
-								window.opener.location.href = "/";
 							}
 						}
 					}

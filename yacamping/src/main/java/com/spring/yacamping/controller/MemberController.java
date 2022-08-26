@@ -1,6 +1,9 @@
 package com.spring.yacamping.controller;
 
 
+import java.io.PrintWriter;
+
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,7 +53,7 @@ public class MemberController {
 
 	// 회원 탈퇴 post
 	@RequestMapping(value = "/memberDelete", method = RequestMethod.POST)
-	public String memberDelete(MemberVO vo, HttpSession session) throws Exception {
+	public String memberDelete(MemberVO vo, HttpSession session, HttpServletResponse response) throws Exception {
 		// 세션에있는 비밀번호
 		String sessionPass = (String)session.getAttribute("password");
 		// vo로 들어오는 비밀번호
@@ -58,10 +61,13 @@ public class MemberController {
 		if (!(sessionPass.equals(voPass))) {
 			return "redirect:/memberDelete";
 		}
-		
+		response.setContentType("text/html; charset=UTF-8");
 		service.memberDelete(vo);
 		session.invalidate();
-		return "redirect:/";
+	    PrintWriter out = response.getWriter();
+	    out.println("<script>window.opener.location.href=\"/\"; self.close();</script>");
+	    out.flush(); 
+		return null;
 	}
 	// 회원 탈퇴 패스워드 체크
 	@ResponseBody

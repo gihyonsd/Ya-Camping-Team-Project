@@ -138,8 +138,8 @@
 				var msg = '(주)야 캠핑 어때' + "\n" + '결제가 완료되었습니다.' + "\n";
 				msg += '캠핑장 이름: ' + rsp.name + "\n";
 				msg += '결제 금액 : ' + rsp.paid_amount;
-				form.submit();
 				alert(msg);
+				form.submit();
 			} else {
 				var msg = '결제에 실패하였습니다.' + "\n";
 				msg += '이유 : ' + rsp.error_msg;

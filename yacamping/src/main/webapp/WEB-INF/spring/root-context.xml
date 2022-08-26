@@ -18,9 +18,9 @@
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
 		<property name="driverClassName" value="oracle.jdbc.OracleDriver"></property>
-		<property name="jdbcUrl" value="jdbc:oracle:thin:@localhost:1521:XE"></property>
-		<property name="username" value="c##java"></property>
-		<property name="password" value="java"></property>
+		<property name="jdbcUrl" value="jdbc:oracle:thin:@camp_high?TNS_ADMIN=/var/lib/tomcat9/Wallet_CAMP"></property>
+		<property name="username" value="admin"></property>
+		<property name="password" value="Sktjdgus@123"></property>
 	</bean>
 	
 
