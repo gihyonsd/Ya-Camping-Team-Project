@@ -20,7 +20,7 @@ if('${msg}'!= '') {
 				<div class="login">
 
 					<img src="resources/image/logo.png">
-					<h2>야캠핑어때</h2>
+					<a href="/"><h2>야캠핑어때</h2></a>
 
 					<div class="login_id">
 						<input type="text" name="id" id="id" value="${cookie.id.value}" placeholder="ID">
